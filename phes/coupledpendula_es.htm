@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>P&eacute;ndulos Acoplados</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 760px; height: 400px; }
+div#canvas { width: 560px; height: 400px; }
+div#panel { left: 560px; width: 200px; height: 400px; } 
+input[type="text"] { left: 40px; width: 80px; }
+button { left: 10px; width: 180px; }
+.pos1 { left: 10px; }
+.pos3 { left: 140px; }
+</style>
+<script src="coupledpendula.js"></script>
+<script src="coupledpendula_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: P&eacute;ndulos Acoplados">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, p&eacute;ndulo, p&eacute;ndulos acoplados, oscilati&oacute;n">
+</head>
+
+<body>
+
+<h1>P&eacute;ndulos Acoplados</h1>
+
+<p>Esta simulaci&oacute;n permite estudiar el comportamiento de dos <em class="Begriff">p&eacute;ndulos acoplados</em> por un muelle de 
+constante el&aacute;stica baja (acoplamiento d&eacute;bil). Es caracter&iacute;stico de un sistema de este tipo que la energ&iacute;a de 
+oscilaci&oacute;n se transfiera continuamente desde una parte del sistema a la otra.</p>
+
+<p>El sistema se coloca en su posici&oacute;n inicial mediante el bot&oacute;n &quot;Inicio&quot;. Se puede comenzar, o parar y continuar, la 
+simulaci&oacute;n mediante los dos botones correspondientes. Si se elige la opci&oacute;n &quot;Ralentizado&quot;, el movimiento se har&aacute; 
+cinco veces m&aacute;s lento. Es posible cambiar las posiciones iniciales de los dos p&eacute;ndulos introduciendo valores en los campos de 
+texto correspondientes. Un &aacute;ngulo positivo (negativo) significa desplazamiento a la derecha (izquierda).</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=560 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 120px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 180px;"><span class="pos1" id="ip0"></span></div>
+    <div style="top: 230px;"><input type="text" id="ip1a"><span class="pos3" id="ip1b"></span></div>
+    <div style="top: 280px;"><input type="text" id="ip2a"><span class="pos3" id="ip2b"></span></div>
+    <div style="top: 360px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 380px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<p>Se puede obtener los <em class="Begriff">arm&oacute;nicos</em> de los dos sistemas como sigue:</p>
+
+<ul>
+<li>Si se escribe dos n&uacute;meros iguales en los campos de texto (e.g. dos veces <span class="nobr">10&deg;),</span> los dos p&eacute;ndulos 
+estar&aacute;n siempre en fase.</li>
+<li>Si se elige dos n&uacute;meros opuestos (e.g. <span class="nobr">8&deg;</span> y <span class="nobr">&minus;8&deg;),</span> se obtiene una 
+oscilaci&oacute;n en oposici&oacute;n de fases.</li>
+</ul>
+
+<p>Si se escribe <span class="nobr">0&deg;</span> en unas de los campos de texto para la posici&oacute;n inicial, la energ&iacute;a total de 
+oscilaci&oacute;n se transfiere alternativamente de uno a otro p&eacute;ndulo: El p&eacute;ndulo que primero se encontraba en la posici&oacute;n 
+central oscila con amplitud creciente mientras que decrece la del otro p&eacute;ndulo; al cabo de cierto tiempo, hay un instante en el cual 
+s&oacute;lo oscila el primero mientras que el segundo se para en la posici&oacute;n central. A continuaci&oacute;n el proceso se invierte, 
+y as&iacute; sucesivamente.</p>
+
+<script type="text/javascript">endPage("coupledpendula",5,7,1998,13,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

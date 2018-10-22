@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Ley de Ohm</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 600px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 200px; height: 400px; }
+.pos1 { left: 10px; } 
+select { width: 180px; }
+button { width: 180px; }
+</style>
+<script src="ohmslaw.js"></script>
+<script src="ohmslaw_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Ley de Ohm">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, tensi&oacute;n, corriente, resistencia, Ohm">
+</head>
+
+<body>
+
+<h1>Ley de Ohm</h1>
+
+<p>Esta aplicaci&oacute;n simula un circuito sencillo de una resistencia. Adem&aacute;s, hay un volt&iacute;metro y un amper&iacute;metro 
+conectados en paralelo y en serie, respectivamente, con la resistencia.</p>
+
+<p>Se puede seleccionar los valores m&aacute;ximos de tensi&oacute;n e intensidad tolerados por los medidores mediante las cajas de 
+selecci&oacute;n correspondientes. Si aparece el mensaje de advertencia &quot;&iexcl;M&aacute;ximo excedido!&quot;, se debe seleccionar 
+otro rango de medida m&aacute;s adecuado. Se puede cambiar la resistencia (R) y la tensi&oacute;n (U) con los cuatro botones correspondientes. 
+En la parte inferior derecha, aparecen los valores de la <span style="color: #0000ff;">tensi&oacute;n (U)</span> y de la 
+<span style="color: #ff0000;">intensidad (I)</span>.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 15px;"><span class="pos1" id="lbU"></span></div>
+    <div style="top: 40px;"><select id="selU"></select></div>
+    <div style="top: 75px;"><span class="pos1" id="lbI"></span></div>
+    <div style="top: 100px;"><select id="selI"></select></div>
+    <div style="top: 135px;"><button id="buR1" style="background-color: #ffff00;"></button></div>
+    <div style="top: 175px;"><button id="buR2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 220px;"><button id="buU1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 260px;"><button id="buU2" style="background-color: #00ffff;"></button></div>
+    <div style="top: 305px; color: #0000ff;"><span class="pos1" id="opU"></span></div>
+    <div style="top: 330px; color: #ff0000;"><span class="pos1" id="opI"></span></div>
+    <div style="top: 360px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 380px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px; margin-top: 20px;">
+<b>Ley de Ohm:</b><br>&nbsp;<br>
+Tensi&oacute;n e intensidad son directamente proporcionales en un conductor met&aacute;lico a temperatura constante.
+</div>
+
+<script type="text/javascript">endPage("ohmslaw",23,11,1997,14,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Ley de la Desintegraci&oacute;n Radiactiva</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 620px; height: 400px; }
+div#canvas { width: 410px; height: 400px; }
+div#panel { left: 410px; width: 210px; height: 400px; } 
+.pos1 { left: 10px; }
+button { width: 190px; }
+</style>
+<script src="lawdecay.js"></script>
+<script src="lawdecay_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Ley de la Desintegraci&oacute;n Radiactiva">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, f&iacute;sica nuclear, radioactivity, desintegraci&oacute;n">
+</head>
+
+<body>
+
+<h1>Ley de la Desintegraci&oacute;n Radiactiva</h1>
+
+<p>La <em class="Begriff">ley de la desintegraci&oacute;n radiactiva</em> predice el decrecimiento con el tiempo del n&uacute;mero de 
+n&uacute;cleos de una sustancia radiactiva dada que van quedando sin desintegrar. Los c&iacute;rculos rojos de esta simulaci&oacute;n 
+representan <span class="nobr">1000 n&uacute;cleos</span> at&oacute;micos de una sustancia radiactiva cuyo tiempo de vida media (T) es 
+<span class="nobr">20 segundos.</span> El diagrama de la parte inferior de la aplicaci&oacute;n representa la fracci&oacute;n de 
+n&uacute;cleos sin desintegrar <span class="nobr">(N/N<sub>0</sub>)</span> en un tiempo dado t, de acuerdo a la ley siguiente:</p>
+
+<p style="margin: 30px; text-align: center;"><span class="Formel">N &nbsp; = &nbsp; N<sub>0</sub> &middot; 2<sup>&minus;t/T</sup></span></p>
+
+<p class="Formel">
+N .... n&uacute;mero de n&uacute;cleos sin desintegrar<br>
+N<sub>0</sub> ... n&uacute;mero de n&uacute;cleos que hay inicialmente<br>
+t .... tiempo<br>
+T .... tiempo de vida media
+</p>
+
+<p>En el momento de iniciar la aplicaci&oacute;n con el bot&oacute;n verde, los n&uacute;cleos at&oacute;micos comienzan a desintegrarse (el 
+color cambia del rojo al negro). Se puede parar o continuar la aplicaci&oacute;n utilizando el bot&oacute;n &quot;Pausa / Reanudar&quot;. 
+En este caso, aparece en el diagrama un punto azul para la fracci&oacute;n de n&uacute;cleos todav&iacute;a sin desintegrar en el instante 
+de tiempo correspondiente. (&iexcl;N&oacute;tese que a menudo estos puntos no quedan exactamente sobre la curva!). Mediante el bot&oacute;n 
+&quot;Inicio&quot; se vuelve al estado inicial.</p>
+
+<p>Es posible encontrar la probabilidad de &quot;supervivencia&quot; durante cierto intervalo de tiempo de un n&uacute;cleo at&oacute;mico dado. 
+Dicha probabilidad es del <span class="nobr">50 %</span> para el tiempo de vida media. Para un intervalo de tiempo doble al de vida media 
+<span class="nobr">(2T),</span> la probabilidad es de s&oacute;lo del <span class="nobr">25 %</span> (la mitad del 
+<span class="nobr">50 %),</span> o del <span class="nobr">12,5 %</span> (la mitad de <span class="nobr">25 %)</span> si el 
+intervalo es triple <span class="nobr">(3T),</span> y as&iacute; sucesivamente.</p>
+
+<p>Sin embargo, no se puede predecir el tiempo de desintegraci&oacute;n de un n&uacute;cleo at&oacute;mico. Por ejemplo, aun cuando la 
+probabilidad de desintegraci&oacute;n en el segundo siguiente sea del <span class="nobr">99 %,</span> es con todo posible (aunque 
+improbable) que el n&uacute;cleo se desintegre al cabo de millones de a&ntilde;os.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=410 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 100px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 160px;"><button id="bu3" style="background-color: #ffffff;"></button></div>
+    <div style="top: 340px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 360px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("lawdecay",16,7,1998,14,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Oscilaci&oacute;n Forzada (Resonancia)</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 710px; height: 420px; }
+div#canvas { width: 450px; height: 420px; }
+div#panel { left: 450px; width: 260px; height: 420px; } 
+.resonator { color: #0000ff; }
+.exciter { color: #ff0000; }
+button { left: 10px; width: 240px; }
+input[type="text"] { left: 130px; width: 70px; }
+.pos1 { left: 10px; }
+.pos3 { left: 215px; }
+</style>
+<script src="resonance.js"></script>
+<script src="resonance_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Oscilaci&oacute;n Forzada (Resonancia)">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, p&eacute;ndulo, oscillaci&oacute;n, resonancia">
+</head>
+
+<body>
+
+<h1>Oscilaci&oacute;n Forzada (Resonancia)</h1>
+
+<p>Se hace oscilar arriba y abajo, por ejemplo con la mano, el extremo superior de un muelle (c&iacute;rculo rojo); se supone que este 
+movimiento es arm&oacute;nico, lo cual significa que es posible describirlo mediante una funci&oacute;n coseno. Las oscilaciones del muelle 
+as&iacute; producidas se llaman <em class="Begriff">oscilaciones forzadas</em>.</p>
+
+<p>Mediante el bot&oacute;n &quot;Inicio&quot;, el muelle vuelve a su posici&oacute;n inicial. Mediante los otros dos botones, se puede comenzar 
+o parar y continuar la simulaci&oacute;n. Si se elige la opci&oacute;n &quot;Ralentizado&quot;, el movimiento se har&aacute; cinco veces 
+m&aacute;s lento. Se puede cambiar, dentro de ciertos l&iacute;mites, los valores de la constante del muelle, masa, constante de 
+atenuaci&oacute;n y frecuencia angular de la excitaci&oacute;n. Adem&aacute;s, se puede elegir, mediante el bot&oacute;n selector 
+correspondiente, uno de los tres diagramas siguientes:</p>
+
+<ul>
+<li>Los desplazamientos de la excitaci&oacute;n y del resonador en funci&oacute;n del tiempo</li>
+<li>La amplitud de oscilaci&oacute;n del resonador en funci&oacute;n de la frecuencia angular de excitaci&oacute;n</li>
+<li>El desfase entre las oscilaciones de la excitaci&oacute;n y del resonador en funci&oacute;n de la frecuencia angular de 
+excitaci&oacute;n.</li>
+</ul>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=450 height=420>This browser doesn't support HTML5 canvas</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div class="resonator" style="top: 130px;"><span class="pos1" id="resonator"></span></div>
+    <div class="resonator" style="top: 155px;"><span class="pos1" id="ipDa"></span><input type="text" id="ipDb" class="resonator">
+      <span class="pos3" id="ipDc"></span></div>
+    <div class="resonator" style="top: 180px;"><span class="pos1" id="ipMa"></span><input type="text" id="ipMb" class="resonator">
+      <span class="pos3" id="ipMc"></span></div>
+    <div class="resonator" style="top: 205px;"><span class="pos1" id="ipAa"></span><input type="text" id="ipAb" class="resonator">
+      <span class="pos3" id="ipAc"></span></div>
+    <div class="exciter" style="top: 240px;"><span class="pos1" id="exciter"></span></div>
+    <div class="exciter" style="top: 265px;"><span class="pos1" id="ipFa"></span><input type="text" id="ipFb" class="exciter">
+      <span class="pos3" id="ipFc"></span></div>
+    <div style="top: 305px;"><input type="radio" id="rb1" name="bg" value=""><label id="lb1" for="rb1"></label></div>
+    <div style="top: 330px;"><input type="radio" id="rb2" name="bg" value=""><label id="lb2" for="rb2"></label></div>
+    <div style="top: 355px;"><input type="radio" id="rb3" name="bg" value=""><label id="lb3" for="rb3"></label></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<p>Se pueden apreciar tres tipos diferentes de comportamiento:</p>
+
+<p>Si la frecuencia de excitaci&oacute;n es muy peque&ntilde;a (lo que equivale a que se hace oscilar el extremo superior del muelle muy 
+lentamente), el muelle oscila pr&aacute;cticamente en fase con la excitaci&oacute;n y con su misma amplitud.</p>
+
+<p>Si la frecuencia de excitaci&oacute;n coincide con la frecuencia caracter&iacute;stica del muelle, la amplitud de oscilaci&oacute;n va 
+creciendo cada vez m&aacute;s (<em class="Begriff">resonancia</em>); en este caso, las oscilaciones del muelle est&aacute;n retrasadas alrededor 
+de un cuarto de per&iacute;odo respecto a la excitaci&oacute;n.</p>
+
+<p>Si la frecuencia de excitaci&oacute;n es muy alta, el resonador oscila con una amplitud muy peque&ntilde;a y casi en oposici&oacute;n de 
+fase.</p>
+
+<p>Si la constante de atenuaci&oacute;n (debida al rozamiento) es muy peque&ntilde;a, el estado transitorio adquiere relevancia; por tanto, es 
+necesario esperar alg&uacute;n tiempo para observar los tipos de comportamiento mencionados.</p>
+
+<p>Esta aplicaci&oacute;n se basa en f&oacute;rmulas que pueden resultar algo complicadas. Si no le gustan las matem&aacute;ticas, no 
+deber&iacute;a pinchar con el rat&oacute;n <a href="resonance_math_es.htm">aqu&iacute;</a>.</p>
+
+<script type="text/javascript">endPage("resonance",9,9,1998,13,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

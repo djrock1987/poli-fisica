@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Movimiento con Aceleraci&oacute;n Constante</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 780px; height: 400px; }
+div#canvas { width: 540px; height: 400px; }
+div#panel { left: 540px; width: 240px; height: 400px; } 
+button { width: 220px; }
+input[type="text"] { left: 10px; width: 150px; }
+.pos1 { left: 10px; }
+.pos3 { left: 180px; }
+</style>
+<script src="acceleration.js"></script>
+<script src="acceleration_es.js"></script>
+<script src="page_phes.js"></script>
+</head>
+
+<body>
+
+<h1>Movimiento con Aceleraci&oacute;n Constante</h1>
+
+<p>Esta aplicaci&oacute;n muestra un autom&oacute;vil movi&eacute;ndose con una <em class="Begriff">aceleraci&oacute;n constante</em>. El panel 
+de control verde contiene cuadros de texto en los cuales se pueden modificar los valores de la <em class="Begriff">posici&oacute;n inicial</em>, 
+la <em class="Begriff">velocidad inicial</em> y la <em class="Begriff">aceleraci&oacute;n</em> (no olvidar que se tiene que presionar la tecla 
+&quot;Enter&quot;). Utilizando los botones de la parte superior derecha puedes regresar el autom&oacute;vil a su posici&oacute;n inicial o 
+detener y reanudar la simulaci&oacute;n. Si se selecciona la opci&oacute;n &quot;Animaci&oacute;n lenta&quot;, el movimiento ser&aacute; diez 
+veces m&aacute;s lento.</p>
+
+<p>Tres relojes digitales indican el tiempo que transcurre desde el inicio. Tan pronto como el autom&oacute;vil alcance respectivamente las 
+barreras verde y roja con su defensa delantera, el reloj correspondiente se detendr&aacute;. Ambas barreras no est&aacute;n fijas se pueden 
+arrastrar manteniendo presionado el bot&oacute;n del rat&oacute;n.</p>
+
+<p>Tres <em class="Begriff">diagramas</em> ilustran el movimiento del veh&iacute;culo:</p>
+
+<ul>
+<li><em class="Begriff">Posici&oacute;n x</em> vs <em class="Begriff">Tiempo t</em></li>
+<li><em class="Begriff">Velocidad v</em> vs <em class="Begriff">Tiempo t</em></li>
+<li><em class="Begriff">Aceleraci&oacute;n a</em> vs <em class="Begriff">Tiempo t</em></li>
+</ul>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=540 height=400>This browser doesn't support HTML 5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input id="cbSlow" type="checkbox" name="cbSlow" value=""><label id="lbSlow" for="cbSlow"></label></div>
+    <div style="top: 130px;"><span class="pos1" id="ipX0a"></span></div>
+    <div style="top: 150px;"><input type="text" id="ipX0b"><span class="pos3" id="ipX0c"></span></div>
+    <div style="top: 180px;"><span class="pos1" id="ipV0a"></span></div>
+    <div style="top: 200px;"><input type="text" id="ipV0b"><span class="pos3" id="ipV0c"></span></div>
+    <div style="top: 230px;"><span class="pos1" id="ipAa"></span></div>
+    <div style="top: 250px;"><input type="text" id="ipAb"><span class="pos3" id="ipAc"></span></div>
+    <div style="top: 290px;"><input type="radio" id="rbV" name="bg" value=""><label for="rbV" id="lbV"></label></div>
+    <div style="top: 320px;"><input type="radio" id="rbA" name="bg" value=""><label for="rbA" id="lbA"></label></div>
+    <div style="top: 360px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 380px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Primera Ley de Kepler</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 720px; height: 440px; }
+div#canvas { width: 440px; height: 440px; }
+div#panel { left: 440px; width: 280px; height: 440px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 170px; }
+.pos3 { left: 250px; }
+select { width: 260px; height: 22px;}
+button { width: 260px; }
+input[type="text"] { left: 170px; width: 60px; }
+</style>
+<script src="keplerlaw1.js"></script>
+<script src="keplerlaw1_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Primera Ley de Kepler">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, planetas, Kepler, leyes de Kepler, gravitaci&oacute;n">
+</head>
+
+<body>
+
+<h1>Primera Ley de Kepler</h1>
+
+<p>&iquest;Cu&aacute;l es la forma de las &oacute;rbitas de los planetas? Los astr&oacute;nomos, desde Ptolomeo hasta Cop&eacute;rnico, 
+ten&iacute;an una clara (pero equivocada) respuesta a esta pregunta: Un planeta se mueve en un c&iacute;rculo o por lo menos en una 
+&oacute;rbita que puede ser explicada como superposici&oacute;n de movimientos circulares. Fu&eacute; <em class="Begriff">Johannes Kepler</em> 
+qui&eacute;n termin&oacute; con esta id&eacute;a err&oacute;nea en 1609. Despu&eacute;s de analizar los numerosos y precisos datos de 
+observaciones realizadas por Tycho Brahe, encontr&oacute; que los planetas orbitaban seg&uacute;n <em class="Begriff">elipses</em>. Los puntos 
+de una elipse se caracterizan por la propiedad de que la suma de sus distancias a los llamados <em class="Begriff">focos</em> es constante.</p>
+
+<div class="Satz" style="width: 600px; margin-top: 20px;">
+<b>Primera Ley de Kepler del movimiento planetario no perturbado:</b><br>&nbsp;<br>
+La &oacute;rbita de cada planeta es una elipse y el Sol se encuentra en uno de sus focos.
+</div>
+
+<p>La siguiente aplicaci&oacute;n ilustra esta ley. En la parte superior derecha del panel verde puede seleccionar uno de ocho planetas, el 
+planeta enano Plut&oacute;n o el Cometa Halley. Adem&aacute;s, se puede investigar la &oacute;rbita de un cuerpo celeste imaginario introduciendo su 
+semieje mayor y la excenticidad (menor que 1). El programa calcular&aacute; la longitud del semieje menor y las distancias actual, mayor y menor 
+desde el Sol. Estas longitudes vienen dadas en <em class="Begriff">unidades astron&oacute;micas</em> (UA). 
+<span class="nobr">1 UA = 1,49597870 &times; 10<sup>11</sup> m</span> se define como la distancia media entre la Tierra 
+y el Sol. En la parte inferior derecha puede decidir si se dibuja la &oacute;rbita el&iacute;ptica, los ejes de la el&iacute;pse o las lineas 
+que unen los cuerpos celestes con los focos <span class="nobr">(F y F').</span></p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=440 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><select id="ch"></select></div>
+    <div style="top: 60px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 90px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"></div>
+    <div style="top: 120px;"><span class="pos1" id="op1a"></span><span id="op1b" class="pos2"></span><span class="pos3" id="op1c"></span></div>
+    <div style="top: 150px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 190px;"><input id="cbSlow" type="checkbox" name="cbSlow" value=""><label id="lbSlow" for="cbSlow"></label></div>
+    <div style="top: 220px;"><span class="pos1" id="lb"></span></div>     
+    <div style="top: 245px;"><span class="pos1" id="op2a"></span><span id="op2b" class="pos2"></span><span class="pos3" id="op2c"></span></div> 
+    <div style="top: 270px;"><span class="pos1" id="op3a"></span><span id="op3b" class="pos2"></span><span class="pos3" id="op3c"></span></div> 
+    <div style="top: 295px;"><span class="pos1" id="op4a"></span><span id="op4b" class="pos2"></span><span class="pos3" id="op4c"></span></div> 
+    <div style="top: 330px;"><input type="checkbox" id="cb1a" name="cb1" value=""><label for="cb1" id="cb1b"></label></div>
+    <div style="top: 355px;"><input type="checkbox" id="cb2a" name="cb2" value=""><label for="cb2" id="cb2b"></label></div>
+    <div style="top: 380px;"><input type="checkbox" id="cb3a" name="cb3" value=""><label for="cb3" id="cb3b"></label></div>
+    <div style="top: 410px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("keplerlaw1",25,3,2000,12,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Resoluci&oacute;n de una Fuerza en sus Componentes</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; }
+input { left: 120px; width: 80px; }
+button { width: 220px; }
+.pos1 { left: 10px; }
+.pos2 { left: 120px; }
+.pos3 { left: 220px;}
+</style>
+<script src="forceresolution.js"></script>
+<script src="forceresolution_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Resoluci&oacute;n de una Fuerza en sus Componentes">
+<meta name="author" content="Walter Fendt, Mario Alberto G&oacute;mez Garc&iacute;a">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, fuerza, resoluci&oacute;n de una fuerza, componentes, paralelogramo de fuerzas">
+</head>
+
+<body>
+
+<h1>Resoluci&oacute;n de una Fuerza en sus Componentes</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML 5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px; color: #c000c0;"><span class="pos1" id="ipFa"></span></div>
+    <div style="top: 40px; color: #c000c0;"><span class="pos1" id="ipFb"></span><input type="text" id="ipFc" style="color: #c000c0;">
+      <span class="pos3" id="ipFd"></span></div>
+    <div style="top: 75px;"><span class="pos1" id="angles"></span></div>
+    <div style="top: 100px; color: #0000ff;"><span class="pos1" id="ipA1a"></span><input type="text" id="ipA1b" style="color: #0000ff;">
+      <span class="pos3" id="ipA1c"></span></div>
+    <div style="top: 125px; color: #ff0000;"><span class="pos1" id="ipA2a"></span><input type="text" id="ipA2b" style="color: #ff0000;">
+      <span class="pos3" id="ipA2c"></span></div>
+    <div style="top: 160px;"><span class="pos1" id="components"></span></div>
+    <div style="top: 185px; color: #0000ff;"><span class="pos1" id="opF1a"></span><span class="pos2" id="opF1b">?</span>
+      <span class="pos3" id="opF1c"></span></div>
+    <div style="top: 215px; color: #ff0000;"><span class="pos1" id="opF2a"></span><span class="pos2" id="opF2b">?</span>
+      <span class="pos3" id="opF2c"></span></div>
+    <div style="top: 250px;"><button id="bu1" style="background-color: #ffc800;"></button></div>
+    <div style="top: 300px;"><button id="bu2" style="background-color: #00ffff;"></button></div>
+    <div style="top: 360px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 380px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("forceresolution",30,5,2003,12,12,2017,"Mario Alberto G&oacute;mez Garc&iacute;a, 2003");</script>
+
+</body>
+</html>

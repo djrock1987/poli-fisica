@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Interferencia de dos Ondas Circulares o Esf&eacute;ricas</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 620px; height: 360px; }
+div#canvas { width: 400px; height: 360px; }
+div#panel { left: 400px; width: 220px; height: 360px; } 
+.pos1 { left: 10px;}
+.pos3 { left: 190px;}
+input[type="text"] { left: 120px; width: 60px; }
+button { width: 180px; }
+</style>
+<script src="interference.js"></script>
+<script src="interference_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Interferencia de dos Ondas Circulares o Esf&eacute;ricas">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, ondas, interferencia">
+</head>
+
+<body>
+
+<h1>Interferencia de dos Ondas Circulares o Esf&eacute;ricas</h1>
+
+<p>Esta aplicaci&oacute;n muestra la <em class="Begriff">interferencia</em> de dos <em class="Begriff">ondas circulares o esf&eacute;ricas</em> 
+(por ejemplo ondas en la superficie del agua o en el aire). Las ondas se propagan desde dos fuentes que oscilan con la misma fase. Para la 
+interferencia de las ondas se aplica el principio de superposici&oacute;n: se suman las amplitudes teniendo en cuenta su signo.</p>
+
+<p>Puede observar los dos casos extremos:</p>
+
+<p>En aquellos puntos en los que la <em class="Begriff">diferencia de caminos &Delta;s</em> (la diferencia de las distancias del punto 
+considerado a las dos fuentes) es un n&uacute;mero entero m&uacute;ltiplo de la <em class="Begriff">longitud de onda &lambda;</em>, las ondas 
+llegan con la misma fase: Esto significa que los m&aacute;ximos (circulos negros)  y los m&iacute;nimos (circulos grises) siempre llegan al 
+mismo tiempo, de modo que la <em class="Begriff">interferencia</em> es <em class="Begriff">constructiva</em> (amplitud m&aacute;xima). Los 
+puntos que poseen esta propiedad se encuentran en las curvas o superficies dibujadas en rojo.</p>
+
+<p>En aquellos puntos en los que la diferencia de caminos &Delta;s es un m&uacute;ltiplo impar de semi-longitudes de onda &lambda;, las ondas 
+llegan en oposici&oacute;n de fase: Esto significa que los m&aacute;ximos de una onda llegan siempre a la vez que los m&iacute;nimos de la 
+otra onda de modo que la <em class="Begriff">interferencia</em> es <em class="Begriff">destructiva</em> (amplitud m&iacute;nima). Los puntos 
+que poseen esta propiedad se encuentran en las curvas o superficies dibujadas en azul.</p>
+
+<p>El bot&oacute;n &quot;Pausa&nbsp;/&nbsp;Reanudar&quot; permite detener o reanudar la simulaci&oacute;n. Si elige la opci&oacute;n 
+&quot;Movimiento&nbsp;lento&quot;, la animaci&oacute;n ir&aacute; cinco veces m&aacute;s lenta. Se puede variar la distancia entre las fuentes 
+y la longitud de onda mediante los campos de texto correspondientes (&iexcl;No olvide presionar la tecla &quot;Intro&quot;!). En la parte 
+inferior el programa muestra la diferencia &Delta;s de caminos (ver p&aacute;rrafo anterior) para el punto violeta.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=360>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 70px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 120px;"><span class="pos1" id="ipDa"></span></div>
+    <div style="top: 155px;"><span class="pos1" id="ipDb"></span><input type="text" id="ipDc"><span class="pos3" id="ipDd"></span></div>
+    <div style="top: 200px;"><span class="pos1" id="ipWa"></span><input type="text" id="ipWb"><span class="pos3" id="ipWc"></span></div>
+    <div style="top: 320px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 340px;"><span class="pos1" id="translator"></span></div>
+  </div> 
+</div>
+
+<script type="text/javascript">endPage("interference",22,5,1999,13,12,2017,"Jos&eacute; M. Zamarro, 2001");</script>
+
+</body>
+</html>

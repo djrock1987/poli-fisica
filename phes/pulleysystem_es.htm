@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Sistema de Poleas</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 620px; height: 420px; }
+div#canvas { width: 400px; height: 420px; }
+div#panel { left: 400px; width: 220px; height: 420px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 40px; }
+.pos3 { left: 160px; }
+.w1 { color: #ff0000; }
+.w2 { color: #c00080; }
+.f { color: #0000ff; }
+select { left: 10px; width: 200px; }
+input[type="text"] { left: 40px; width: 100px; }
+</style>
+<script src="pulleysystem.js"></script>
+<script src="pulleysystem_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Sistema de Poleas">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, fuerza, poleas">
+</head>
+
+<body>
+
+<h1>Sistema de Poleas</h1>
+
+<p>En esta aplicaci&oacute;n se puede elevar o bajar una carga mediante el rat&oacute;n. Manteniendo el bot&oacute;n del rat&oacute;n presionado, 
+aparece un dinam&oacute;metro indicando la tensi&oacute;n en la cuerda. Se puede cambiar el peso de la carga y de las poleas colgantes en las 
+casillas de valores correspondientes. Los datos de entrada, si son demasiado altos, se ajustan autom&aacute;ticamente al l&iacute;mite de la 
+escala del dinam&oacute;metro <span class="nobr">(10 N).</span></p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><select id="ch">
+      <option id="r2">2</option>
+      <option id="r4">4</option>
+      <option id="r6">6</option>
+    </select></div>
+    <div style="top: 60px;"><span class="pos1 w1" id="ip1a"></span></div>
+    <div style="top: 90px;"><input type="text" id="ip1b" class="w1"><span class="pos3 w1" id="ip1c"></span></div>
+    <div style="top: 130px;"><span class="pos1 w2" id="ip2a"></span></div>
+    <div style="top: 160px;"><input type="text" id="ip2b" class="w2"><span class="pos3 w2" id="ip2c"></span></div>
+    <div style="top: 210px;"><span class="pos1 f" id="opa"></span></div>
+    <div style="top: 250px;"><span id="opb" class="pos1 f"></span></div>
+    <div style="top: 290px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 320px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 370px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 390px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("pulleysystem",24,3,1998,12,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

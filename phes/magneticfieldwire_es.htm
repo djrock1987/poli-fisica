@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Campo Magn&eacute;tico de una Corriente Rectil&iacute;nea</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 600px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 200px; height: 400px; }
+.pos1 { left: 10px; } 
+button { width: 180px; background-color: #ff4040; }
+</style>
+<script src="magneticfieldwire.js"></script>
+<script src="magneticfieldwire_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Campo magn&eacute;tico de una corriente rectil&iacute;nea">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, campo magn&eacute;tico, corriente">
+</head>
+
+<body>
+
+<h1>Campo Magn&eacute;tico<br>
+de una Corriente Rectil&iacute;nea</h1>
+
+<p>Una <em class="Begriff">corriente el&eacute;ctrica</em> produce un <em class="Begriff">campo m&aacute;gn&eacute;tico</em>. Esta 
+aplicaci&oacute;n simula una experiencia relativa al campo magn&eacute;tico generado por una corriente el&eacute;ctrica continua que circula por 
+un hilo rectil&iacute;neo indefinido. Una corriente intensa circula por un hilo vertical. Se puede invertir el sentido de la corriente mediante 
+el bot&oacute;n rojo. Los signos en los extremos del hilo simbolizan la polaridad de la bater&iacute;a conectada. La direcci&oacute;n 
+convencional de la corriente viene dada por las flechas rojas. &#161;Observe que el movimiento de los electrones (puntos verdes) es opuesta a la 
+direcci&oacute;n convenida de la corriente!</p>
+
+<p>Una aguja imanada que puede ser desplazada (arrastrando el rat&oacute;n con el bot&oacute;n presionado) muestra la direcci&oacute;n del campo 
+magn&eacute;tico (azul) en una posici&oacute;n dada. Los polos norte y sur de la aguja est&aacute;n pintados de color rojo y verde 
+respectivamente. Se desprecia la influencia del campo magn&eacute;tico terrestre.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><button id="bu"></button></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<p>Las l&iacute;neas de campo magn&eacute;tico de una corriente continua rectil&iacute;nea forman c&iacute;rculos conc&eacute;ntricos alrededor 
+del hilo conductor. La direcci&oacute;n del campo magn&eacute;tico (flechas azules) viene dada por la regla de la mano derecha: Cuando el pulgar 
+de la mano derecha se&ntilde;ala la direcci&oacute;n de la corriente, los otros dedos rodean el hilo conductor en la direcci&oacute;n del campo 
+magn&eacute;tico.</p>
+
+<script type="text/javascript">endPage("magneticfieldwire",18,9,2000,13,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

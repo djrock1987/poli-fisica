@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Fuerza de Empuje en L&iacute;quidos</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 700px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 300px; height: 400px; }
+input { left: 170px; width: 60px; }
+select { left: 170px; width: 60px; font-family: monospace;}
+.pos1 { left: 10px; }
+.pos2 { left: 170px; }
+.pos3 { left: 255px;}
+</style>
+<script src="buoyantforce.js"></script>
+<script src="buoyantforce_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Java applet: Empuje en L&iacute;quidos">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, empuje">
+</head>
+
+<body>
+
+<h1>Fuerza de Empuje en L&iacute;quidos</h1>
+
+<p>Esta aplicaci&oacute;n ilustra un experimento sencillo relativo al <em class="Begriff">empuje en l&iacute;quidos</em>. Un s&oacute;lido 
+colgando de un dinam&oacute;metro se sumerge en un l&iacute;quido (&iexcl;mediante el arrastre del rat&oacute;n!). En este caso se reduce la 
+fuerza medida, siendo igual a la diferencia entre el peso y la fuerza de empuje.</p>
+
+<p>Se puede cambiar (dentro de ciertos l&iacute;mites) los valores preseleccionados de las densidades y del &aacute;rea de la base y altura 
+del cuerpo actuando sobre los campos de texto correspondientes. Tras presionar la tecla &quot;Enter&quot;, el programa indica los nuevos valores 
+de la profundidad, volumen desplazado, fuerza de empuje, peso y fuerza medida. Se supone un valor 
+<span class="nobr">g = 9,81&nbsp;m/s<sup>2</sup></span> para la aceleraci&oacute;n de la gravedad.</p>
+
+<p>Si aparece el mensaje &quot;M&aacute;ximo excedido&quot; con letras en rojo, es necesario seleccionar otro rango de medida adecuado.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 50px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span class="pos3" id="ip2c"></span></div>
+    <div style="top: 80px;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b"><span class="pos3" id="ip3c"></span></div>
+    <div style="top: 110px;"><span class="pos1" id="ip4a"></span><input type="text" id="ip4b"><span class="pos3" id="ip4c"></span></div>
+    <div style="top: 150px;"><span class="pos1" id="op1a"></span><span class="pos2" id="op1b"></span><span class="pos3" id="op1c"></span></div>
+    <div style="top: 180px;"><span class="pos1" id="op2a"></span><span class="pos2" id="op2b"></span><span class="pos3" id="op2c"></span></div>
+    <div style="top: 210px;"><span class="pos1" id="op3a"></span><span class="pos2" id="op3b"></span><span class="pos3" id="op3c"></span></div>
+    <div style="top: 240px;"><span class="pos1" id="op4a"></span><span class="pos2" id="op4b"></span><span class="pos3" id="op4c"></span></div>
+    <div style="top: 270px;"><span class="pos1" id="op5a"></span><span class="pos2" id="op5b"></span><span class="pos3" id="op5c"></span></div>
+    <div style="top: 320px;"><span class="pos1" id="MRa"></span><select id="MRb"></select><span class="pos3" id="MRc"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px; margin-top: 20px;"><strong>Ley de Arqu&iacute;medes:</strong><br>
+La fuerza de empuje es igual al peso de l&iacute;quido o gas desalojado.</div>
+
+<script>endPage("buoyantforce",19,4,1998,12,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

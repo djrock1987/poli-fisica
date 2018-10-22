@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Muelle Oscilante</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../ph/page2.css">
+<style>
+div#total { width: 760px; height: 420px; }
+div#canvas { width: 500px; height: 420px; }
+div#panel { left: 500px; width: 260px; height: 420px; } 
+input[type="text"] { left: 130px; width: 80px; }
+button { left: 10px; width: 240px; }
+.pos1 { left: 10px; }
+.pos3 { left: 225px; }
+</style>
+<script src="springpendulum.js"></script>
+<script src="springpendulum_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Muelle Oscilante">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, p&eacute;ndulo, oscilaci&oacute;n">
+</head>
+
+<body>
+
+<h1>Muelle Oscilante</h1>
+
+<p>Esta aplicaci&oacute;n ense&ntilde;a c&oacute;mo var&iacute;an la elongaci&oacute;n, velocidad, aceleraci&oacute;n, fuerza y 
+energ&iacute;a durante la <em class="Begriff">oscilaci&oacute;n de un muelle</em> (se supone ausencia de rozamiento).</p>
+
+<p>El muelle se coloca en su posici&oacute;n inicial mediante el bot&oacute;n &quot;Inicio&quot;. Se puede comenzar o parar y continuar la 
+aplicaci&oacute;n con los otros dos botones. Si se elige la opci&oacute;n &quot;Ralentizado&quot; el movimiento se hace cinco veces m&aacute;s 
+lento. Los valores de la constante del muelle, la masa, la aceleraci&oacute;n de la gravedad y la amplitud de oscilaci&oacute;n pueden cambiarse 
+dentro de ciertos l&iacute;mites. Para cambiar la magnitud f&iacute;sica a observar, se debe actuar sobre el bot&oacute;n de selecci&oacute;n 
+adecuado de entre los cinco existentes.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 130px;"><span class="pos1" id="ipDa"></span><input type="text" id="ipDb"><span class="pos3" id="ipDc"></span></div>
+    <div style="top: 155px;"><span class="pos1" id="ipMa"></span><input type="text" id="ipMb"><span class="pos3" id="ipMc"></span></div>
+    <div style="top: 180px;"><span class="pos1" id="ipGx"></span></div>
+    <div style="top: 195px;"><span class="pos1" id="ipGa"></span><input type="text" id="ipGb"><span class="pos3" id="ipGc"></span></div>
+    <div style="top: 220px;"><span class="pos1" id="ipAa"></span><input type="text" id="ipAb"><span class="pos3" id="ipAc"></span></div>
+    <div style="top: 250px;"><input type="radio" id="rbY" name="bg" value=""><label for="rbY" style="color: #ff0000;" id="lbY"></label></div>
+    <div style="top: 275px;"><input type="radio" id="rbV" name="bg" value=""><label for="rbV" style="color: #ff00ff;" id="lbV"></label></div>
+    <div style="top: 300px;"><input type="radio" id="rbA" name="bg" value=""><label for="rbA" style="color: #0000ff;" id="lbA"></label></div>
+    <div style="top: 325px;"><input type="radio" id="rbF" name="bg" value=""><label for="rbF" style="color: #008020;" id="lbF"></label></div>
+    <div style="top: 350px;"><input type="radio" id="rbE" name="bg" value=""><label for="rbE" style="color: #000000;" id="lbE"></label></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("springpendulum",24,5,1998,13,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

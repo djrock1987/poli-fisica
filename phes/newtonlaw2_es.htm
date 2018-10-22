@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Experimento de la Segunda Ley de Newton</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 720px; height: 440px; }
+div#canvas { width: 500px; height: 440px; }
+div#panel { left: 500px; width: 220px; height: 440px; }
+.pos1 { left: 10px; }
+.pos3 { left: 160px; }
+button { width: 200px; }
+input[type="text"] { left: 60px; width: 80px; }
+textarea { width: 185px; height: 70px; padding: 3px; border-radius: 0px; font-family: monospace; font-size: 12px; font-weight: bold; } 
+</style>
+<script src="newtonlaw2.js"></script>
+<script src="newtonlaw2_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Experimento de la Segunda Ley de Newton">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, Newton, fuerza, aceleraci&oacute;n">
+</head>
+
+<body>
+
+<h1>Experimento de la Segunda Ley de Newton</h1>
+
+<p>Con esta aplicaci&oacute;n se simula una mesa o carril de aire como herramientas de utilidad para obtener un 
+<em class="Begriff">movimiento uniformemente acelerado</em>. El valor de la aceleraci&oacute;n de la gravedad se toma igual a 
+<span class="nobr">9,81 m/s<sup>2</sup></span>.</p>
+
+<p>Es posible cambiar, dentro de ciertos l&iacute;mites, la masa del carro, la del cuerpo que cuelga y el coeficiente de rozamiento.</p>
+
+<p>El experimento consiste en la determinaci&oacute;n del tiempo de recorrido (mostrado digitalmente con un error de 
+<span class="nobr">1 ms)</span> de la zona de medida previamente ajustada con el bot&oacute;n presionado (desde la posici&oacute;n inicial 
+hasta la barrera LS, con un error de <span class="nobr">5 mm).</span> Durante el movimiento, un punto rojo va indicando en un diagrama 
+espacio-tiempo la distancia recorrida para cada instante de tiempo. Al finalizar el tiempo de medida, aparecen en el diagrama el par de valores 
+correspondientes. Si a continuaci&oacute;n se pulsa con el rat&oacute;n en el bot&oacute;n &quot;Anotar Datos&quot;, los valores medidos 
+aparecen en una lista. Se puede obtener una serie de <span class="nobr">10 medidas</span> como m&aacute;ximo.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 90px;"><button id="bu3" style="background-color: #ffffff;"></button></div>
+    <div style="top: 140px;"><span id="ip1a" class="pos1"></span></div>
+    <div style="top: 160px;"><span id="ip1b" class="pos1"></span><input type="text" id="ip1c"><span id="ip1d" class="pos3"></span></div>
+    <div style="top: 190px;"><span id="ip2a" class="pos1"></span></div>
+    <div style="top: 210px;"><span id="ip2b" class="pos1"></span><input type="text" id="ip2c"><span id="ip2d" class="pos3"></span></div> 
+    <div style="top: 240px;"><span id="ip3a" class="pos1"></span></div>
+    <div style="top: 260px;"><span id="ip3b" class="pos1"></span><input type="text" id="ip3c"></div>   
+    <div style="top: 295px;"><span id="lbM" class="pos1"></span></div> 
+    <div style="top: 320px;"><textarea id="ta"></textarea></div>
+    <div style="top: 420px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<p>F&oacute;rmulas involucradas:</p>
+
+<p><em class="Begriff">Aplicaci&oacute;n de la ley de la fuerza de Newton:</em></p>
+
+<p style="text-align: center;"><img src="math/newtonlaw2_f1.gif" alt="F&oacute;rmula 1"></p>
+
+<p class="Formel">
+a ... Aceleraci&oacute;n<br>
+m ... Masa del cuerpo colgante<br>
+g ... Aceleraci&oacute;n de la gravedad<br>
+&mu; ... Coeficiente de fricci&oacute;n<br>
+M ... Masa del carro</p>
+
+<p><em class="Begriff">Movimiento uniformemente acelerado con velocidad inicial 0:</em></p>
+
+<p style="text-align: center;"><img src="math/newtonlaw2_f2.gif" alt="F&oacute;rmula 2"></p>
+
+<p class="Formel">
+s ... Desplazamiento<br>
+a ... Aceleraci&oacute;n<br>
+t ... Tiempo</p>
+
+<script type="text/javascript">endPage("newtonlaw2",23,12,1997,12,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

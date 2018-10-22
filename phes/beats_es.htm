@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Pulsaciones</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 680px; height: 400px; }
+div#canvas { width: 480px; height: 400px; }
+div#panel { left: 480px; width: 200px; height: 400px; } 
+button { width: 180px; }
+input[type="text"] { left: 80px; width: 60px; }
+.pos1 { left: 10px; }
+.pos3 { left: 160px; }
+</style>
+<script src="beats.js"></script>
+<script src="beats_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Pulsaciones">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, ondeas, pulsaciones, batimiento">
+</head>
+
+<body>
+
+<h1>Pulsaciones</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=480 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 120px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 170px;"><span class="pos1" id="lb1"></span></div>
+    <div style="top: 220px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 270px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span class="pos3" id="ip2c"></span></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("beats",21,10,2001,13,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

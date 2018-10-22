@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Telescopio Astron&oacute;mico</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 720px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 220px; height: 400px; }
+input { left: 110px; width: 60px; }
+.pos1 { left: 10px; }
+.pos2 { left: 110px; }
+.pos3 { left: 190px;}
+</style>
+<script src="refractor.js"></script>
+<script src="refractor_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Telescopio Astron&oacute;mico">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, &oacute;ptica, Kepler, telescopio">
+</head>
+
+<body>
+
+<h1>Telescopio Astron&oacute;mico</h1>
+
+<p>Este app simula un <em class="Begriff">telescopio astron&oacute;nmico</em> sencillo, formado por dos lentes llamadas 
+<em class="Begriff">objetivo</em> y <em class="Begriff">ocular</em>. Los rayos de luz que inciden desde la izquierda del objetivo son 
+refractados por el objetivo y despu&eacute;s por el ocular y alcanzan el ojo de la persona que mira a trav&eacute;s del telescopio (a la 
+derecha del ocular). Tenga en cuenta que las l&iacute;neas rojas de la simulaci&oacute;n no corresponden exactamente con los rayos reales 
+que son refractados en ambas superficies de las lentes. La aproximaci&oacute;n simplificadora de lente delgada supone una desviaci&oacute;n 
+en el plano de simetria. Si la distancia focal del objetivo (f<sub>1</sub>) es mayor que la distancia focal del ocular(f<sub>2</sub>), 
+el telescopio produce una imagen aumentada e invertida.</p>
+
+<p>Es posible modificar las distancias focales del objetivo y del ocular de <span class="nobr">0,05 m</span> a 
+<span class="nobr">0,5 m</span> utilizando los campos de texto del panel (&iexcl;no olvide presionar la tecla &quot;Intro&quot;!. 
+Adem&aacute;s puede modificar la direcci&oacute;n de los rayos arrastrando el rat&oacute;n. El programa calcula los &aacute;ngulos entre 
+los rayos de luz y el eje &oacute;ptico para el objetivo y el ocular (marcados en azul y verde) y el aumento. Como ejemplo el applet muestra 
+las seis estrellas m&aacute;s brillantes de las Pleiades vistas directamente con el ojo (parte inferior izquierda) y a trav&eacute;s del 
+telescopio (parte inferior derecha).</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 30px;"><span class="pos1" id="lb1"></span></div>
+    <div style="top: 60px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 90px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span class="pos3" id="ip2c"></span></div>
+    <div style="top: 150px;"><span class="pos1" id="lb2"></span></div>
+    <div style="top: 180px;"><span class="pos1" id="op1a"></span><span class="pos2" id="op1b"></span><span class="pos3" id="op1c"></span></div>
+    <div style="top: 210px;"><span class="pos1" id="op2a"></span><span class="pos2" id="op2b"></span><span class="pos3" id="op2c"></span></div>
+    <div style="top: 270px;"><span class="pos1" id="op3a"></span><span class="pos2" id="op3b"></span></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<p>El <em class="Begriff">aumento</em> del telescopio puede obtenerse con la siguiente f&oacute;rmula aproximada (para peque&ntilde;os 
+&aacute;ngulos):</p>
+
+<p style="margin: 30px; text-align: center;"><span class="Formel">v = &minus; f<sub>1</sub> / f<sub>2</sub></span></p>
+
+<p class="Formel">
+v .... Aumento<br>
+f<sub>1</sub> ... Distancia focal del objetivo<br>
+f<sub>2</sub> ... Distancia focal del ocular
+</p>
+
+<script>endPage("refractor",8,3,2000,14,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

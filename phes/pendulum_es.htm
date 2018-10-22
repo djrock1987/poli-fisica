@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>El P&eacute;ndulo</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 820px; height: 420px; }
+div#canvas { width: 560px; height: 420px; }
+div#panel { left: 560px; width: 260px; height: 420px; } 
+button { left: 10px; width: 240px; }
+input[type="text"] { left: 130px; width: 80px; }
+.pos1 { left: 10px; }
+.pos3 { left: 225px; }
+</style>
+<script src="pendulum.js"></script>
+<script src="pendulum_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: P&eacute;ndulo">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, oscilaci&oacute;n, p&eacute;nulo">
+</head>
+
+<body>
+
+<h1>El P&eacute;ndulo</h1>
+
+<p>Esta aplicaci&oacute;n ilustra c&oacute;mo var&iacute;an la elongaci&oacute;n, velocidad, aceleraci&oacute;n tangencial, fuerza y 
+energ&iacute;a durante la oscilaci&oacute;n de un <em class="Begriff">p&eacute;ndulo</em> (se supone ausencia de rozamiento).</p>
+
+<p>Con el bot&oacute;n &quot;Inicio&quot; se pone al p&eacute;ndulo en su posici&oacute;n inicial. Los otros dos botones sirven para comenzar o 
+parar y continuar la aplicaci&oacute;n. Si se elige la opci&oacute;n &quot;Ralentizado&quot; el movimiento se har&aacute; diez veces m&aacute;s 
+lento. Se puede cambiar, dentro de ciertos l&iacute;mites, la longitud del p&eacute;ndulo, la aceleraci&oacute;n de la gravedad, la masa y la 
+amplitud de oscilaci&oacute;n. Para cambiar la magnitud f&iacute;sica a observar, se debe elegir el bot&oacute;n apropiado de entre los cinco 
+botones selectores.</p>
+
+<p>Se desprecia en los c&aacute;lculos, la d&eacute;bil dependencia del per&iacute;odo de oscilaci&oacute;n con la amplitud 
+(en el margen de amplitudes permitido en esta aplicaci&oacute;n).</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=540 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 130px;"><span class="pos1" id="ipLa"></span><input type="text" id="ipLb"><span class="pos3" id="ipLc"></span></div>
+    <div style="top: 155px;"><span class="pos1" id="ipGx"></span></div>
+    <div style="top: 170px;"><span class="pos1" id="ipGa"></span><input type="text" id="ipGb"><span class="pos3" id="ipGc"></span></div>
+    <div style="top: 195px;"><span class="pos1" id="ipMa"></span><input type="text" id="ipMb"><span class="pos3" id="ipMc"></span></div>
+    <div style="top: 220px;"><span class="pos1" id="ipAa"></span><input type="text" id="ipAb"><span class="pos3" id="ipAc"></span></div>
+    <div style="top: 250px;"><input type="radio" id="rbY" name="bg" value=""><label id="lbY" for="rbY" style="color: #ff0000;"></label></div>
+    <div style="top: 275px;"><input type="radio" id="rbV" name="bg" value=""><label id="lbV" for="rbV" style="color: #ff00ff;"></label></div>
+    <div style="top: 300px;"><input type="radio" id="rbA" name="bg" value=""><label id="lbA" for="rbA" style="color: #0000ff;"></label></div>
+    <div style="top: 325px;"><input type="radio" id="rbF" name="bg" value=""><label id="lbF" for="rbF" style="color: #008020;"></label></div>
+    <div style="top: 350px;"><input type="radio" id="rbE" name="bg" value=""><label id="lbE" for="rbE" style="color: #000000;"></label></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("pendulum",21,5,1998,12,12,2017,"Juan Mu&ntilde;oz,1999");</script>
+
+</body>
+</html>

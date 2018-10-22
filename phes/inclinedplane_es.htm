@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Plano Inclinado</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 660px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 260px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 150px; }
+.pos3 { left: 230px; }
+input[type="text"] { left: 150px; width: 60px; }
+button { width: 240px; }
+.weight { color: #ff00ff; }
+.parallel { color: #0000ff; }
+.normal { color: #ff0000; }
+.force { color: #008000; }
+</style>
+<script src="inclinedplane.js"></script>
+<script src="inclinedplane_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Plano Inclinado">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, plano inclinado, fuerza normal">
+</head>
+
+<body>
+
+<h1>Plano Inclinado</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML 5  canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 60px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 110px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 140px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 165px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 195px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 220px;"><span class="pos1 weight" id="ip2a"></span><input type="text" id="ip2b" class="weight">
+      <span class="pos3 weight" id="ip2c"></span></div>
+    <div style="top: 245px;"><span class="pos1 parallel" id="op1a"></span><span id="op1b" class="pos2 parallel"></span>
+      <span class="pos3 parallel" id="op1c"></span></div>
+    <div style="top: 270px;"><span class="pos1 normal" id="op2a"></span><span id="op2b" class="pos2 normal"></span>
+      <span class="pos3 normal" id="op2c"></span></div>
+    <div style="top: 295px;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b"></div>
+    <div style="top: 320px;"><span class="pos1" id="op3a"></span><span id="op3b" class="pos2"></span>
+      <span class="pos3" id="op3c"></span></div>
+    <div style="top: 345px;"><span class="pos1 force" id="op4a"></span><span id="op4b" class="pos2 force"></span>
+      <span class="pos3 force" id="op4c"></span></div>
+    <div style="top: 380px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("inclinedplane",24,2,1999,12,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

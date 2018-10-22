@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Refracci&oacute;n y Refracci&oacute;n de la Luz</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 820px; height: 360px; }
+div#canvas { width: 560px; height: 360px; }
+div#panel { left: 560px; width: 260px; height: 360px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 160px; }
+.pos3 { left: 235px; }
+select { width: 240px; height: 22px;}
+input[type="text"] { left: 160px; width: 60px; }
+</style>
+<script src="refraction.js"></script>
+<script src="refraction_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Refracci&oacute;n y Refracci&oacute;n de la Luz">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, &oacute;ptica, &oacute;ptica geom&eacute;trica, refracci&oacute;n, &iacute;ndice de refracci&oacute;n">
+</head>
+
+<body>
+
+<h1>Refracci&oacute;n y Refracci&oacute;n de la Luz</h1>
+
+<p>Un rayo de luz incide desde la parte superior izquierda sobre la superficie de separaci&oacute;n de dos medios (se da la posibilidad de 
+seleccionar distintas parejas de medios que aparecen en sendas listas). Se puede variar el &aacute;ngulo de incidencia del rayo de luz 
+manteniendo presionado el bot&oacute;n del rat&oacute;n. El medio con &iacute;ndice de refracci&oacute;n mayor se pinta en azul y el otro 
+en amarillo.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=560 height=360>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><select id="ch1"></select></div>
+    <div style="top: 50px;"><select id="ch2"></select></div>
+    <div style="top: 90px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"></div>
+    <div style="top: 130px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"></div>
+    <div style="top: 170px; color: #000000;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b">
+      <span class="pos3" id="ip3c"></span></div>
+    <div style="top: 210px; color: #0000ff;"><span class="pos1" id="op1a"></span><span id="op1b" class="pos2"></span>
+      <span class="pos3" id="op1c"></span></div>
+    <div style="top: 250px; color: #ff0000;"><span class="pos1" id="op2a"></span><span id="op2b" class="pos2"></span>
+      <span class="pos3" id="op2c"></span></div>
+    <div style="top: 280px; color: #0000ff;"><span id="op3a" class="pos1"></span></div>
+    <div style="top: 300px; color: #0000ff;"><span id="op3b" class="pos1"></span><span id="op3c" class="pos2"></span>
+      <span id="op3d" class="pos3"></span></div>
+    <div style="top: 335px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("refraction",20,12,1997,14,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

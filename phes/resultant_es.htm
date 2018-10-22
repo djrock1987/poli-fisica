@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Composici&oacute;n de Fuerzas (Suma de Vectores)</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 600px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 200px; height: 400px; } 
+.pos1 { left: 10px; }
+button { width: 180px; }
+select { width: 180px; }
+</style>
+<script src="resultant.js"></script>
+<script src="resultant_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App en HTML 5: Composici&oacute;n de Fuerzas (Suma de Vectores)">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, fuerza, resultante, adici&oacute;n de vectores, suma de vectores">
+</head>
+
+<body>
+
+<h1>Composici&oacute;n de Fuerzas (Suma de Vectores)</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span class="pos1" id="number"></span></div>
+    <div style="top: 50px;"><select id="ch" class="pos1">
+      <option>&nbsp;&nbsp; 2</option>
+      <option>&nbsp;&nbsp; 3</option>
+      <option>&nbsp;&nbsp; 4</option>
+      <option>&nbsp;&nbsp; 5</option>
+    </select></div>
+    <div style="top: 120px;"><button id="bu1" style="background-color: #ffff00; color: #ff0000;"></button></div>
+    <div style="top: 170px;"><button id="bu2" style="background-color: #00ffff;"></button></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("resultant",2,11,1998,12,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+
+</html>

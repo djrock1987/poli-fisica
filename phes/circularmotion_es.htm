@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Movimiento Circular Uniforme</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../ph/page2.css">
+    <style>
+    div#total { width: 840px; height: 440px; }
+    div#canvas { width: 580px; height: 440px; }
+    div#panel { left: 580px; width: 260px; height: 440px; } 
+    .pos1 { left: 10px; }
+    .pos3 { left: 220px; }
+    input[type="text"] { left: 100px; width: 100px; }
+    button { width: 240px; }
+    div#panel div{box-sizing: initial;}
+    </style>
+<script src="circularmotion.js"></script>
+<script src="circularmotion_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Movimiento Circular Uniforme">
+<meta name="author" content="Walter Fendt, Mario Alberto G&oacute;mez Garc&iacute;a">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, movimiento circular, velocidad angular, aceleraci&oacute;n centr&iacute;peta, fuerza centr&iacute;peta">
+</head>
+
+<body>
+
+<h1>Movimiento Circular Uniforme</h1>
+
+<p>El <em class="Begriff">Movimiento Circular</em> toma un rol importante en la naturaleza y la tecnolog&iacute;a. Por ejemplo, los planetas 
+se mueven (apr&oacute;ximadamente) en &oacute;rbitas circulares alrededor del sol; tambi&eacute;n est&aacute;n la armadura rotatoria (rotor) 
+de un motro el&eacute;ctrico o el cig&uuml;e&ntilde;al de un motor a gasolina.</p>
+
+<p>Esta aplicaci&oacute;n simula tal movimiento circular y demuestra c&oacute;mo la posici&oacute;n, velocidad, aceleraci&oacute;n y la fuerza 
+aplicada var&iacute;an en funci&oacute;n del tiempo. El bot&oacute;n &quot;Restablecer&quot; lleva la part&iacute;cula giratoria a su 
+posici&oacute;n inicial.
+Puedes iniciar, detener o continuar la simulaci&oacute;n con el otro bot&oacute;n. Si eliges la opci&oacute;n &quot;Animaci&oacute;n lenta&quot;, 
+el movimiento ser&aacute; diez veces m&aacute;s lento. Puedes modificar el radio, el per&iacute;odo y la masa en los campos de entrada 
+correspondientes. Los botones de opci&oacute;n (Posici&oacute;n, Velocidad, Aceleraci&oacute;n y Fuerza) te dan la posibilidad de seleccionar 
+una de las cuatro magnitudes f&iacute;sicas.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=580 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 60px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 110px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 150px;"><span class="pos1" id="ipRa"></span><input type="text" id="ipRb"><span class="pos3" id="ipRc"></span></div>
+    <div style="top: 180px;"><span class="pos1" id="ipTa"></span><input type="text" id="ipTb"><span class="pos3" id="ipTc"></span></div>
+    <div style="top: 210px;"><span class="pos1" id="ipMa"></span><input type="text" id="ipMb"><span class="pos3" id="ipMc"></span></div>
+    <div style="top: 260px; color: #ff0000;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 290px; color: #ff00ff;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 320px; color: #0000ff;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>
+    <div style="top: 350px; color: #006000;"><input type="radio" id="rb4" name="bg" value=""><label for="rb4" id="lb4"></label></div>
+    <div style="top: 400px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 420px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<p>El <span style="color: #ff0000;">vector radial</span> (<span style="color: #ff0000;">rojo</span>) conecta el centro de rotaci&oacute;n (el 
+origen del sistema de coordenadas) a la part&iacute;cula giratoria. El <span style="color: #800080;">vector velocidad</span> 
+(<span style="color: #800080;">violeta</span>) es tangencial al c&iacute;rculo y perpendicular al vector radial. El 
+<span style="color: #0000ff;">vector aceleraci&oacute;n</span> (<span style="color: #0000ff;">azul</span>) se dirige hacia adentro (hacia el 
+centro); esta aceleraci&oacute;n no es resultado de un incremento o disminuci&oacute;n de la rapidez (magnitud de la velocidad), sino debido al 
+cambio en la direcci&oacute;n del movimiento. Lo anterior tambi&eacute;n se cumple para la <span style="color: #008000;">fuerza</span> 
+(<span style="color: #008000;">verde</span>) sobre el cuerpo en movimiento. 
+Los t&eacute;rminos <span style="color: #0000ff;">aceleraci&oacute;n centr&iacute;peta</span> y <span style="color: #008000;">fuerza 
+centr&iacute;peta</span> expresan que estos vectores se dirigen hacia el centro del movimiento circular.</p>
+
+<script type="text/javascript">endPage("circularmotion",25,3,2007,12,12,2017,"Mario Alberto G&oacute;mez Garc&iacute;a, 2008");</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Campo Magn&eacute;tico de un Im&aacute;n</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 820px; height: 400px; }
+div#canvas { width: 600px; height: 400px; }
+div#panel { left: 600px; width: 220px; height: 400px; }
+.pos1 { left: 10px; } 
+button { width: 200px; }
+</style>
+<script src="magneticfieldbar.js"></script>
+<script src="magneticfieldbar_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Campo Magn&eacute;tico de un Im&aacute;n">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, magnetismo, campo magn&eacute;tico, im&aacute;n">
+</head>
+
+<body>
+
+<h1>Campo Magn&eacute;tico de un Im&aacute;n</h1>
+
+<p>El <em class="Begriff">campo magn&eacute;tico</em> de un im&aacute;n puede investigarse con una aguja imanada. Los polos magn&eacute;ticos 
+del im&aacute;n con forma de barra y de la aguja imanada se simbolizan con los siguientes colores:</p>
+
+<table style="margin: 20px; font-weight: bold;">
+<tr style="color: #ff0000;">
+<td style="width: 150px;">polo norte</td>
+<td style="width: 150px;">rojo</td>
+</tr>
+<tr style="color: #008000;">
+<td>polo sur</td>
+<td>verde</td>
+</tr>
+</table>
+
+<p>Si mueve la aguja imanada con el rat&oacute;n, se dibujar&aacute; la l&iacute;nea de campo magn&eacute;tico que pasa por el centro de la 
+aguja imanada en color azul. Las flechas azules indican la direcci&oacute;n del campo magn&eacute;tico que se define como la direcci&oacute;n 
+indicada por el polo norte de la aguja imanada. Si gira el im&aacute;n utilizando el bot&oacute;n rojo, la direcci&oacute;n de las lineas de 
+campo se invierte. El bot&oacute;n izquierdo permite borrar todas las l&iacute;neas del campo.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 110px;"><button id="bu2" style="background-color: #ff4040;"></button></div>
+    <div style="top: 340px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 360px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("magneticfieldbar",20,4,2001,13,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

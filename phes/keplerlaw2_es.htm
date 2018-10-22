@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Segunda Ley de Kepler</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 740px; height: 440px; }
+div#canvas { width: 440px; height: 440px; }
+div#panel { left: 440px; width: 300px; height: 440px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 170px; }
+.pos3 { left: 250px; }
+select { width: 280px; height: 22px;}
+button { width: 280px; }
+input[type="text"] { left: 170px; width: 60px; }
+input[type="range"] { left: 120px; width: 160px; }
+</style>
+<script src="keplerlaw2.js"></script>
+<script src="keplerlaw2_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Segunda Ley de Kepler">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, planetas, Kepler, leyes de Kepler, gravitaci&oacute;n">
+</head>
+
+<body>
+
+<h1>Segunda Ley de Kepler</h1>
+
+<p>&iquest;En qu&eacute; punto de su &oacute;rbita el&iacute;ptica se encuentra un planeta en un instante dado? En 1609, 
+<em class="Begriff">Johannes Kepler</em> pudo contestar esta pregunta con la siguiente sencilla ley:</p>
+
+<div class="Satz" style="width: 600px; margin-top: 20px;">
+<b>Segunda Ley de Kepler del movimiento planetario no perturbado:</b><br>&nbsp;<br>
+La l&iacute;nea que une el planeta al Sol barre &aacute;reas iguales en intervalos iguales de tiempo.
+</div>
+
+<p>Una simulaci&oacute;n por ordenador ilustra esta ley. En la parte superior derecha del panel hay una lista donde puede seleccionar uno de los 
+nueve planetas o el Cometa Halley. Adem&aacute;s es posible determinar la &oacute;rbita de un cuerpo celeste imaginario introduciendo los 
+valores num&eacute;ricos del semieje mayor y la excentricidad (&iexcl;no olvide presionar la tecla &quot;Intro&quot;!). Puede parar y reanudar 
+la simulaci&oacute;n del movimiento planetario utilizando el bot&oacute;n &quot;Pausa&nbsp;/&nbsp;Reanudar&quot; o hacerlo m&aacute;s lento. Si 
+selecciona la opci&oacute;n &quot;Sectores&quot;, la aplicaci&oacute;n muestra dos sectores de &aacute;reas iguales y dos relojes en los que se 
+puede leer el tiempo de barrido de estos sectores (expresado en per&iacute;odos de la &oacute;rbita T). Los sectores pueden aumentarse o reducirse 
+con un deslizador o desplazarse presionando sobre ellos con el rat&oacute;n. Si se desea se pueden mostrar los vectores velocidad de los planetas 
+o cometas. En la parte inferior derecha del panel el programa da informaci&oacute;n sobre las distancias desde el Sol (en unidades 
+astron&oacute;micas; <span class="nobr">1 AU = 1,49597870 &times; 10<sup>11</sup> m)</span> y la velocidad (en km/h).</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=440 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><select id="ch"></select></div>
+    <div style="top: 60px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 90px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"></div>
+    <div style="top: 120px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 160px;"><input id="cbSlow" type="checkbox" name="cbSlow" value=""><label id="lbSlow" for="cbSlow"></label></div>
+    <div style="top: 190px;"><span class="pos1" id="op1a"></span></div>
+    <div style="top: 210px;"><span class="pos1" id="op1b"></span><span class="pos2" id="op1c"></span><span class="pos3" id="op1d"></span></div>     
+    <div style="top: 240px;"><span class="pos1" id="lb"></span></div> 
+    <div style="top: 265px;"><span class="pos1" id="op2a"></span><span class="pos2" id="op2b"></span><span class="pos3" id="op2c"></span></div>
+    <div style="top: 290px;"><span class="pos1" id="op3a"></span><span class="pos2" id="op3b"></span><span class="pos3" id="op3c"></span></div> 
+    <div style="top: 315px;"><span class="pos1" id="op4a"></span><span class="pos2" id="op4b"></span><span class="pos3" id="op4c"></span></div> 
+    <div style="top: 355px;"><input type="checkbox" id="cb1a" name="cb1" value=""><label for="cb1" id="cb1b"></label>
+      <input type="range" id="sl" min=1 max=20 step=1 value=4></div>
+    <div style="top: 380px;"><input type="checkbox" id="cb2a" name="cb3" value=""><label for="cb2" id="cb2b"></label></div>
+    <div style="top: 410px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("keplerlaw2",4,4,2000,12,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

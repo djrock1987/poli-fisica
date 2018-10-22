@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<meta charset="utf-8">
+<title>Circuito Electromagn&eacute;tico Oscilatorio</title>
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css"> 
+div#total { width: 740px; height: 420px; } 
+div#canvas { width: 480px; height: 420px; }
+div#panel { left: 480px; width: 260px; height: 420px; } 
+.pos1 { left: 10px; }
+.pos3 { left: 235px; } 
+button { width: 240px; }  
+input[type="text"] { left: 140px; width: 80px; }  
+</style>
+<script src="oscillatingcircuit.js"></script>
+<script src="oscillatingcircuit_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Circuito Electromagn&eacute;tico Oscilatorio">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, circuito oscillatorio">
+</head>
+
+<body>
+
+<h1>Circuito Electromagn&eacute;tico Oscilatorio</h1>
+
+<p>Esta simulaci&oacute;n trata sobre un <em class="Begriff">circuito electromagn&eacute;tico oscilatorio</em> formado por un 
+<em class="Begriff">condensador</em> (centro) y una <em class="Begriff">autoinducci&oacute;n</em> (una <em class="Begriff">bobina</em> a la 
+derecha). En cuanto se presiona el bot&oacute;n &quot;Reiniciar&quot; las placas del condensador se cargan, la placa superior positivamente 
+y la inferior negativamente. Despu&eacute;s de presionar el bot&oacute;n &quot;Iniciar&quot; el conmutador se desplaza a la otra posici&oacute;n 
+y la oscilaci&oacute;n comienza. El bot&oacute;n &quot;Pausa&nbsp;/&nbsp;Reanudar&quot; permite interrumpir y reanudar la simulaci&oacute;n. 
+La animaci&oacute;n se enlentecer&aacute; 10 o 100 veces seg&uacute;n la selecci&oacute;n que se efect&uacute;e. Se puede modificar el valor 
+de la capacidad (de <span class="nobr">100 &mu;F</span> a <span class="nobr">1000 &mu;F),</span> la inductancia de la bobina (de 
+<span class="nobr">1 H</span> a <span class="nobr">10 H)</span> y la resistencia (de <span class="nobr">0 &Omega;</span> a 
+<span class="nobr">1000 &Omega;)</span> y el voltaje de la bater&iacute;a utilizando los cuatro campos de texto.</p>
+
+<p>El campo el&eacute;ctrico del condensador (rojo) y el campo magn&eacute;tico de la inducci&oacute;n (azul) se muestran mediante l&iacute;neas 
+de campo en el diagrama del circuito. La densidad de estas l&iacute;neas muestra la intensidad del campo correspondiente. Adem&aacute;s puede 
+ver los signos de la carga de las placas del condesador y flechas para la direcci&oacute;n (convencional) de la corriente.</p>
+
+<p>En la parte inferior izquierda un reloj digital indica el tiempo desde el comienzo de la oscilaci&oacute;n; debajo se indica el 
+per&iacute;odo de la oscilaci&oacute;n. En la parte inferior izquierda se ve uno de los dos diagramas dependiendo de la selecci&oacute;n 
+realizada en la parte inferior del panel de control:<br>
+1. Diagrama que muestra c&oacute;mo var&iacute;an el voltaje U (azul) y la corriente I (rojo) con el tiempo.<br>
+2. Un gr&aacute;fico de barras que describe las transformaciones de energ&iacute;a.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=480 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 100px;"><input type="radio" name="bg1" value="" id="rb1"><label for="rb1" id="rb1lb"></label></div>
+    <div style="top: 130px;"><input type="radio" name="bg1" value="" id="rb2"><label for="rb2" id="rb2lb"></label></div>
+    <div style="top: 170px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 210px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span class="pos3" id="ip2c"></span></div>
+    <div style="top: 250px;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b"><span class="pos3" id="ip3c"></span></div>
+    <div style="top: 290px;"><span class="pos1" id="ip4a"></span><input type="text" id="ip4b"><span class="pos3" id="ip4c"></span></div>
+    <div style="top: 325px;"><input type="radio" name="bg2" value="" id="rb3"><label for="rb3" id="rb3lb"></label></div>
+    <div style="top: 355px;"><input type="radio" name="bg2" value="" id="rb4"><label for="rb4" id="rb4lb"></label></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("oscillatingcircuit",23,10,1999,14,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

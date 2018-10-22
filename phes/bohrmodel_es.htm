@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Teor&iacute;a de Bohr del &Aacute;tomo de Hidr&oacute;geno</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 700px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 200px; height: 400px; } 
+select { width: 180px; }
+.pos1 { left: 10px; }
+</style>
+<script src="bohrmodel.js"></script>
+<script src="bohrmodel_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Teor&iacute;a de Bohr del &Aacute;tomo de Hidr&oacute;geno">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, Bohr, &aacute;tomo, hidr&oacute;geno">
+</head>
+
+<body>
+
+<h1>Teor&iacute;a de Bohr del &Aacute;tomo de Hidr&oacute;geno</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 80px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 150px;"><span id="lb3" class="pos1"></span></div>
+    <div style="top: 200px;"><select id="ch"></select></div>
+    <div style="top: 340px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 360px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("bohrmodel",30,5,1999,14,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

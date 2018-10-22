@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Motor de Corriente Continua</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+table.DFR { border: 1px solid black; width: 480px; display: block; margin: 0px auto; margin-bottom: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; }
+div#total { width: 700px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 200px; height: 400px; } 
+.pos1 { left: 10px; }
+button { width: 180px; }
+input[type="range"] { width: 180px; }
+</style>
+<script src="electricmotor.js"></script>
+<script src="electricmotor_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Motor de Corriente Continua">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, campo magn&eacute;tico, corriente, fuerza de Lorentz, motor">
+</head>
+
+<body>
+
+<h1>Motor de Corriente Continua</h1>
+
+<p>Esta aplicaci&oacute;n simula el funcionamiento de un <em class="Begriff">motor de corriente continua</em> elemental, mostrando sus 
+partes m&aacute;s importantes simplificadamente para mayor claridad. En lugar de un armaz&oacute;n con un n&uacute;cleo de hierro y muchos 
+bobinados, hay una &uacute;nica espira conductora cuadrada girando alrededor de un eje, el cual no se dibuja.</p>
+
+<p>Las flechas rojas indican el sentido convencional de la corriente (de m&aacute;s a menos). Las l&iacute;neas de campo magn&eacute;tico 
+aparecen en rojo, dirigi&eacute;ndose desde el polo norte (pintado en azul) hacia el polo sur (pintado en verde). Las flechas de color negro 
+representan la fuerza de Lorentz que se ejerce sobre un conductor por el que circula una corriente el&eacute;ctrica situado en el seno de un 
+campo magn&eacute;tico.</p>
+
+<p>Dicha fuerza de Lorentz es perpendicular a la direcci&oacute;n de la corriente y a las l&iacute;neas de campo magn&eacute;tico. 
+El sentido de esta fuerza viene dado por la regla de los tres dedos de la mano derecha:</p>
+
+<table class="DFR">
+<tr style="color: #ff0000;">
+<td style="width: 150px; padding: 5px;">Pulgar:</td>
+<td style="padding: 5px;">Sentido convencional de la corriente</td>
+</tr><tr style="color: #0000ff;">
+<td style="padding: 5px;">&Iacute;ndice:</td>
+<td style="padding: 5px;">Sentido del campo magn&eacute;tico</td>
+</tr><tr style="color:#000000;">
+<td style="padding: 5px;">Coraz&oacute;n:</td>
+<td style="padding: 5px;">Sentido de la fuerza de Lorentz</td>
+</tr>
+</table>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 90px;"><button id="bu3" style="background-color: #ff6060;"></button></div>
+    <div style="top: 140px;"><input type="range" id="sl" min=0 max=20 step=1 value=10></div>
+    <div style="top: 170px;"><span id="lb" class="pos1"></span></div>
+    <div style="top: 200px;"><input type="checkbox" id="cb1" name="cb1" value=""><label for="cb1" id="lb1" style="color: #ff0000;"></label></div>
+    <div style="top: 240px;"><input type="checkbox" id="cb2" name="cb2" value=""><label for="cb2" id="lb2" style="color: #0000ff;"></label></div>
+    <div style="top: 280px;"><input type="checkbox" id="cb3" name="cb3" value=""><label for="cb3" id="lb3" style="color: #000000;"></label></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("electricmotor",29,11,1997,13,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

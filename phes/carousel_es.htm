@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Tiovivo (fuerza centr&iacute;peta)</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 740px; height: 400px; }
+div#canvas { width: 440px; height: 400px; }
+div#panel { left: 440px; width: 300px; height: 400px; } 
+button { left: 10px; width: 280px; }
+input[type="text"] { left: 190px; width: 60px; }
+.pos1 { left: 10px; }
+.pos3 { left: 265px; }
+</style>
+<script src="carousel.js"></script>
+<script src="carousel_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Tiovivo (fuerza centr&iacute;peta)">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, fuerza centr&iacute;peta">
+</head>
+
+<body>
+
+<h1>Modelo de Tiovivo (Fuerza Centr&iacute;peta)</h1>
+
+<p>La velocidad de un cuerpo, en m&oacute;dulo, direcci&oacute;n y sentido, permanece constante de acuerdo con la primera ley de Newton 
+(<em class="Begriff">ley de la inercia</em>) si no act&uacute;a ninguna fuerza sobre el o la resultante de todas las fuerzas que act&uacute;an 
+es cero. Las circunstancis de un movimiento circular son diferentes: En este caso debe haber una fuerza, llamada <em class="Begriff">fuerza 
+centr&iacute;peta</em>, dirigida hacia el eje de rotaci&oacute;n. Este modelo sencillo de un tiovivo muestra esta fuerza.</p>
+
+<p>Si selecciona la segunda de las cuatro opciones que se encuentran en la parte superior derecha, se dibujar&aacute;n los vectores de las 
+fuerzas que se ejercen sobre cada una de las ocho masas de los p&eacute;ndulos: la fuerza del peso se dibuja en negro, la fuerza ejercida por la 
+cuerda de azul. La suma de estos vectores nos da la fuerza resultante (roja) que es la fuerza centr&iacute;peta que apunta hacia adentro y que 
+se mencion&oacute; antes.</p>
+
+<p>Adem&aacute;s de la simulaci&oacute;n del tiovivo (con las flechas que representan las fuerzas o sin ellas) el programa ofrece un boceto 
+bidimensional de los vectores fuerzas y valores importantes del movimiento circular.</p>
+
+<p>Si desea observar con detenimiento las flechas de las fuerzas, puede detener el giro utilizando el bot&oacute;n 
+<span class="nobr">&quot;Pausa / Reanudar&quot;</span> o hacerlo diez veces m&aacute;s lento con la opci&oacute;n 
+<span class="nobr">&quot;Movimiento lento&quot;.</span> Los campos de texto 
+permiten variar los par&aacute;metros entre ciertos l&iacute;mites (&iexcl;no olvide presionar la tecla &quot;Intro&quot;!).</p>
+
+<p>Nota: La simulaci&oacute;n supone un movimiento circular con velocidad angular constante; los procesos mientras las masas se aceleran o 
+enlentecen no se tienen en cuenta. Tambi&eacute;n se desprecian los efectos de la resistencia del aire.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=440 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><input type="radio" id="rb1" name="bg" value=""><label id="lb1" for="rb1"></label></div>
+    <div style="top: 45px;"><input type="radio" id="rb2" name="bg" value=""><label id="lb2" for="rb2"></label></div>
+    <div style="top: 70px;"><input type="radio" id="rb3" name="bg" value=""><label id="lb3" for="rb3"></label></div>
+    <div style="top: 95px;"><input type="radio" id="rb4" name="bg" value=""><label id="lb4" for="rb4"></label></div>    
+    <div style="top: 130px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 180px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 215px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 245px;"><span class="pos1" id="ip2a"></span></div>
+    <div style="top: 270px;"><span class="pos1" id="ip2b"></span><input type="text" id="ip2c"><span class="pos3" id="ip2d"></span></div>
+    <div style="top: 300px;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b"><span class="pos3" id="ip3c"></span></div>
+    <div style="top: 330px;"><span class="pos1" id="ip4a"></span><input type="text" id="ip4b"><span class="pos3" id="ip4c"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("carousel",10,3,1999,12,12,2017,"Jos&eacute; M. Zamarro, 2001");</script>
+
+</body>
+</html>

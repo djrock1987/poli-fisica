@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Choque El&aacute;stico e Inel&aacute;stico</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 660px; height: 440px; }
+div#canvas { width: 400px; height: 440px; }
+div#panel { left: 400px; width: 260px; height: 440px; }
+.pos1 { left: 10px; }
+.pos3 { left: 220px; }
+.wagon1 { color: #ff0000; }
+.wagon2 { color: #0000ff; }
+input[type="text"] { left: 120px; width: 80px; }
+button { width: 240px; }
+</style>
+<script src="collision.js"></script>
+<script src="collision_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Choque El&aacute;stico e Inel&aacute;stico">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, choque el&aacute;stico, choque inel&aacute;stico">
+</head>
+
+<body>
+
+<h1>Choque El&aacute;stico e Inel&aacute;stico</h1>
+
+<p>Esta aplicaci&oacute;n trata de los casos extremos de un proceso de colisi&oacute;n ilustrado con dos carros: En un 
+<em class="Begriff">choque el&aacute;stico</em> se cumple que la suma de las energ&iacute;as cin&eacute;ticas de los cuerpos involucrados es 
+constante. Sin embargo, tras un <em class="Begriff">choque totalmente inel&aacute;stico</em>, ambos cuerpos tienen la misma velocidad; la suma 
+de sus energ&iacute;as cin&eacute;ticas es menor que la inicial porque una parte de esta se ha transformado en energ&iacute;a interna 
+(calentamiento).</p>
+
+<p>El momento total de los cuerpos involucrados se conserva, independientemente de que el choque sea el&aacute;stico o inel&aacute;stico. 
+El movimiento del centro de masas (indicado por un punto amarillo) no se ve afectado por el proceso de colisi&oacute;n.</p>
+
+<p>Se puede elegir entre choque el&aacute;stico o inel&aacute;stico utilizando el bot&oacute;n selector correspondiente, situado en la parte 
+superior derecha. Mediante el bot&oacute;n &quot;Inicio&quot;, los vagones vuelven a sus posiciones iniciales; la simulaci&oacute;n arranca 
+haciendo un &quot;click&quot; con el rat&oacute;n sobre el bot&oacute;n &quot;Comenzar&quot;. Si se elige la opci&oacute;n 
+&quot;Ralentizado&quot;, el movimiento se har&aacute; diez veces m&aacute;s lento.</p>
+
+<p>Se puede elegir los valores de la masa y de la velocidad inicial en los campos de texto correspondientes. Valores positivos (negativos) de 
+la velocidad resultan en un movimiento lateral hacia la derecha (izquierda). Valores extremados de entrada son corregidos
+autom&aacute;ticamente.</p>
+
+<p>Dependiendo del bot&oacute;n selector elegido (abajo, a la derecha), la aplicaci&oacute;n mostrar&aacute; las velocidades, momentos o 
+energ&iacute;as cin&eacute;ticas de los carros.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><input type="radio" id="rb1" name="bg1" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 35px;"><input type="radio" id="rb2" name="bg1" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 65px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 105px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 145px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 175px;"><span class="pos1 wagon1" id="wagon1"></span></div>
+    <div style="top: 200px;"><span class="pos1 wagon1" id="ipM1a"></span><input type="text" id="ipM1b" class="wagon1">
+      <span class="pos3 wagon1" id="ipM1c"></span></div>
+    <div style="top: 225px;"><span class="pos1 wagon1" id="ipV1a"></span><input type="text" id="ipV1b" class="wagon1">
+      <span class="pos3 wagon1" id="ipV1c"></span></div>
+    <div style="top: 250px;"><span class="pos1 wagon2" id="wagon2"></span></div>
+    <div style="top: 275px;"><span class="pos1 wagon2" id="ipM2a"></span><input type="text" id="ipM2b" class="wagon2">
+      <span class="pos3 wagon2" id="ipM2c"></span></div>
+    <div style="top: 300px;"><span class="pos1 wagon2" id="ipV2a"></span><input type="text" id="ipV2b" class="wagon2">
+      <span class="pos3 wagon2" id="ipV2c"></span></div>
+    <div style="top: 340px;"><input type="radio" id="rbV" name="bg2" value=""><label for="rbV" id="lbV"></label></div>
+    <div style="top: 365px;"><input type="radio" id="rbP" name="bg2" value=""><label for="rbP" id="lbP"></label></div>
+    <div style="top: 390px;"><input type="radio" id="rbE" name="bg2" value=""><label for="rbE" id="lbE"></label></div>
+    <div style="top: 420px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("collision",7,11,1998,12,12,2017, "Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

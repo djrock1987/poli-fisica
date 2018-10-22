@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Generador de Corriente</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 840px; height: 400px; }
+div#canvas { width: 600px; height: 400px; }
+div#panel { left: 600px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+button { width: 220px; }
+input[type="range"] { width: 220px; }
+</style>
+<script src="generator.js"></script>
+<script src="generator_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Generador de Corriente">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, generador">
+</head>
+
+<body>
+
+<h1>Generador de Corriente</h1>
+
+<p>Esta aplicaci&oacute;n simula el funcionamiento de un <em class="Begriff">generador de corriente</em> elemental, mostrando 
+simplificadamente sus partes m&aacute;s importantes para mayor claridad. En lugar de un armaz&oacute;n con un n&uacute;cleo de hierro y muchos 
+bobinados, hay una &uacute;nica espira conductora cuadrada girando alrededor de un eje, el cual no se dibuja.</p>
+
+<p>El bot&oacute;n selector de la esquina superior derecha permite seleccionar un generador AC (sin conmutador) o un generador DC (con 
+conmutador). Se puede invertir la direcci&oacute;n de rotaci&oacute;n utilizando el bot&oacute;n correspondiente. El control deslizante permite 
+variar la velocidad de rotaci&oacute;n. Mediante el bot&oacute;n &quot;Pausa/Reanudar&quot;, se puede detener y continuar la similaci&oacute;n. 
+La detenci&oacute;n no significa una parada real del movimiento puesto que, en este caso, el voltaje inducido ser&iacute;a cero.</p>
+
+<p>Dos flechas en negro marcan el sentido instant&aacute;neo del movimiento. Las l&iacute;neas de campo magn&eacute;tico aparecen en azul, 
+dirigi&eacute;ndose desde el polo norte (pintado en rojo) hacia el polo sur (pintado en verde). Las flechas en rojo representan el sentido 
+convencional de la corriente inducida.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><input type="radio" id="rb1a" name="bg" value=""><label for="rb1" id="rb1b"></label></div>
+    <div style="top: 50px;"><input type="radio" id="rb2a" name="bg" value=""><label for="rb2" id="rb2b"></label></div>
+    <div style="top: 90px;"><button id="bu1" style="background-color: #ff6060;"></button></div>
+    <div style="top: 140px;"><input type="range" id="sl" min=0 max=20 step=1 value=10></div>
+    <div style="top: 170px;"><span id="op" class="pos1"></span></div>
+    <div style="top: 200px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 250px;"><input type="checkbox" id="cb1a" name="cb1a" value=""><label for="cb1a" id="cb1b" style="color: #000000;"></label></div>
+    <div style="top: 280px;"><input type="checkbox" id="cb2a" name="cb2a" value=""><label for="cb2a" id="cb2b" style="color: #0000ff;"></label></div>
+    <div style="top: 310px;"><input type="checkbox" id="cb3a" name="cb3a" value=""><label for="cb3a" id="cb3b" style="color: #ff0000;"></label></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("generator",8,5,1998,13,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

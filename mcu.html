@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <title>Politecnico grancolombiano - Fisica</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/page2.css" type="text/css">
+<style>
+div#total { width: 840px; height: 440px; }
+div#canvas { width: 580px; height: 440px; }
+div#panel { left: 580px; width: 260px; height: 440px; padding-left: 10px;} 
+.pos1 { left: 10px; }
+.pos3 { left: 220px; }
+input[type="text"] { left: 100px; width: 100px; }
+button { width: 240px; }
+div#panel span{position:initial;padding-right: 20px;padding-left: 20px;}
+</style>
+<script src="phes/circularmotion.js"></script>
+<script src="phes/circularmotion_es.js"></script>
+<script src="phes/page_phes.js"></script>
+  </head>
+  <body>
+  	<header id="header" class="">
+  		<!-- <header id="header" class="sticky-top"> -->
+		
+			<nav class="navbar navbar-expand-sm navbar-light">
+				<div class="container">
+					  <a class="navbar-brand" href="#"><img class="img-fluid" src="images/logo-poli-politecnico-grancolombiano2018.png" alt=""></a>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					    <span class="navbar-toggler-icon"></span>
+					  </button>
+
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					    <ul class="navbar-nav ml-auto">
+					    	<li class="nav-item">
+								<a class="nav-link" href="#">Fisica <i class="fa fa-user"></i></a>
+							</li>
+					    </ul>
+					    
+					  </div>
+				</div>
+			</nav>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h1>Experimentos de física aplicada</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+				<div class="card">
+				  <div class="card-body">
+				    <h5 class="card-title">Movimiento Circular Uniforme</h5>
+				    <p class="card-text text-justify">
+				    <p>El <em class="Begriff">Movimiento Circular</em> toma un rol importante en la naturaleza y la tecnolog&iacute;a. Por ejemplo, los planetas 
+se mueven (apr&oacute;ximadamente) en &oacute;rbitas circulares alrededor del sol; tambi&eacute;n est&aacute;n la armadura rotatoria (rotor) 
+de un motro el&eacute;ctrico o el cig&uuml;e&ntilde;al de un motor a gasolina.</p>
+
+<p>Esta aplicaci&oacute;n simula tal movimiento circular y demuestra c&oacute;mo la posici&oacute;n, velocidad, aceleraci&oacute;n y la fuerza 
+aplicada var&iacute;an en funci&oacute;n del tiempo. El bot&oacute;n &quot;Restablecer&quot; lleva la part&iacute;cula giratoria a su 
+posici&oacute;n inicial.
+Puedes iniciar, detener o continuar la simulaci&oacute;n con el otro bot&oacute;n. Si eliges la opci&oacute;n &quot;Animaci&oacute;n lenta&quot;, 
+el movimiento ser&aacute; diez veces m&aacute;s lento. Puedes modificar el radio, el per&iacute;odo y la masa en los campos de entrada 
+correspondientes. Los botones de opci&oacute;n (Posici&oacute;n, Velocidad, Aceleraci&oacute;n y Fuerza) te dan la posibilidad de seleccionar 
+una de las cuatro magnitudes f&iacute;sicas.	
+				</p>
+				    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+					 Ver ejemplo:
+					</button>
+				  </div>
+				</div>
+			</div>
+			
+
+			</div>
+		</div>
+	</div>
+	<footer class="">
+			<nav class="navbar navbar-light bg-light mt-5">
+				<div class="container">
+					<div class="col-12 text-center">
+			  			<a class="navbar-brand copyright" href="#">Todos los derechos reservados 2018 </a>
+			  		</div>
+				</div>
+			</nav>
+	</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Movimiento con Aceleración Constante</h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body padding-lado-0">
+   			<div id="total">
+  <div id="canvas"><canvas id="cv" width=580 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 60px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 110px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 150px;"><span class="pos1" id="ipRa"></span><input type="text" id="ipRb"><span class="pos3" id="ipRc"></span></div>
+    <div style="top: 180px;"><span class="pos1" id="ipTa"></span><input type="text" id="ipTb"><span class="pos3" id="ipTc"></span></div>
+    <div style="top: 210px;"><span class="pos1" id="ipMa"></span><input type="text" id="ipMb"><span class="pos3" id="ipMc"></span></div>
+    <div style="top: 260px; color: #ff0000;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 290px; color: #ff00ff;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 320px; color: #0000ff;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>
+    <div style="top: 350px; color: #006000;"><input type="radio" id="rb4" name="bg" value=""><label for="rb4" id="lb4"></label></div>
+    <div style="top: 400px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 420px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+

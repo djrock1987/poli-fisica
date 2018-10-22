@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Oscilaci&oacute;n Forzada, Ap&eacute;ndice Matem&aacute;tico</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../ph/page2.css">
+<style type="text/css">
+.case1 { margin-left: 20px; padding: 3px; background-color: #ff80ff; }
+.case2 { margin-left: 20px; padding: 3px; background-color: #00ff00; }
+</style>
+</head>
+
+<body>
+
+<h1>Oscilaci&oacute;n Forzada<br>Ap&eacute;ndice Matem&aacute;tico</h1>
+
+<p>El muelle oscilante se caracteriza por la constante el&aacute;stica D, la masa m y la constante de atenuaci&oacute;n &Gamma;. (&Gamma; es una 
+medida de la fuerza de fricci&oacute;n cuando se supone que &eacute;sta es proporcional a la velocidad.)<br>
+El muelle se excita mediante un movimiento hacia arriba y abajo de su extremo superior,
+seg&uacute;n la f&oacute;rmula
+
+<span class="nobr">y<sub>E</sub>&nbsp;&nbsp;=&nbsp;&nbsp;A<sub>E</sub>&nbsp;cos&nbsp;(&omega;t).</span>
+
+En ella, y<sub>E</sub> representa el desplazamiento de la excitaci&oacute;n respecto a la posici&oacute;n media; A<sub>E</sub> es la amplitud 
+de oscilaci&oacute;n de la excitaci&oacute;n, siendo &omega; la frecuencia angular y t el tiempo.</p>
+
+<p>Se trata de encontrar el valor del desplazamiento del resonador (respecto a su posici&oacute;n media), y, en el instante t. Haciendo 
+<span class="nobr">&omega;<sub>0</sub> &nbsp; = &nbsp; (D/m)<sup>1/2</sup>,</span> el problema queda descrito por la siguiente ecuaci&oacute;n 
+diferencial:</p>
+
+<table class="Formel" style="margin: 10px auto; padding: 4px; background-color: #00e0ff; border: solid 3px #000000;"><tr><td class="Formel">
+y''(t) &nbsp; = &nbsp; &omega;<sub>0</sub><sup>2</sup>
+(A<sub>E</sub> cos (&omega;t) &minus; y(t)) &nbsp;
+&minus; &nbsp; &Gamma; y'(t)<br>
+Condiciones iniciales: &nbsp; &nbsp; y(0) = 0; &nbsp; y'(0) = 0
+</td></tr></table>
+
+<p>Al resolver esta ecuaci&oacute;n diferencial, hay que distinguir varios casos:</p>
+
+<table class="case1"><tr><td>
+<b>Caso 1: &Gamma; &lt; 2 &omega;<sub>0</sub></b>
+</td></tr></table>
+
+<div class="Abstand">&nbsp;</div>
+
+<table class="case2"><tr><td>
+<b>Caso 1.1:
+&Gamma; &lt; 2 &omega;<sub>0</sub>;
+&Gamma; &ne; 0 &nbsp; o &nbsp;
+&omega; &ne; &omega;<sub>0</sub></b>
+</td></tr></table>
+
+<p>y(t) &nbsp; = &nbsp; A<sub>abs</sub> sin (&omega;t)
++ A<sub>el</sub> cos (&omega;t) &nbsp;
++ &nbsp; e<sup>&minus;&Gamma;t/2</sup>
+[A<sub>1</sub> sin (&omega;<sub>1</sub>t)
++ B<sub>1</sub> cos (&omega;<sub>1</sub>t)]<br>
+
+&omega;<sub>1</sub> &nbsp; = &nbsp;
+(&omega;<sub>0</sub><sup>2</sup> &minus;
+&Gamma;<sup>2</sup>/4)<sup>1/2</sup><br>
+
+A<sub>abs</sub> &nbsp; = &nbsp; A<sub>E</sub>
+&omega;<sub>0</sub><sup>2</sup>
+&Gamma; &omega;
+/ [(&omega;<sub>0</sub><sup>2</sup>
+&minus; &omega;<sup>2</sup>)<sup>2</sup>
++ &Gamma;<sup>2</sup>
+&omega;<sup>2</sup>]<br>
+
+A<sub>el</sub> &nbsp; = &nbsp; A<sub>E</sub>
+&omega;<sub>0</sub><sup>2</sup>
+(&omega;<sub>0</sub><sup>2</sup>
+&minus; &omega;<sup>2</sup>)
+/ [(&omega;<sub>0</sub><sup>2</sup>
+&minus; &omega;<sup>2</sup>)<sup>2</sup>
++ &Gamma;<sup>2</sup>
+&omega;<sup>2</sup>]<br>
+
+A<sub>1</sub> &nbsp; = &nbsp; &minus; (A<sub>abs</sub> &omega;
++ (&Gamma;/2) A<sub>el</sub>)
+/ &omega;<sub>1</sub><br>
+
+B<sub>1</sub> &nbsp; = &nbsp; &minus; A<sub>el</sub>
+
+</p>
+
+<table class="case2"><tr><td>
+<b>Caso 1.2:
+&Gamma; &lt; 2 &omega;<sub>0</sub>;
+&Gamma; = 0 &nbsp; y &nbsp;
+&omega; = &omega;<sub>0</sub></b>
+</td></tr></table>
+
+<p>y(t) &nbsp; = &nbsp; (A<sub>E</sub> &omega; t / 2)
+sin (&omega;t)</p>
+
+<table class="case1"><tr><td>
+<b>Caso 2: &Gamma; =
+2 &omega;<sub>0</sub></b>
+</td></tr></table>
+
+<p>y(t) &nbsp; = &nbsp; A<sub>abs</sub> sin (&omega;t)
++ A<sub>el</sub> cos (&omega;t) &nbsp;
++ &nbsp; e<sup>&minus;&Gamma;t/2</sup>
+(A<sub>1</sub> t + B<sub>1</sub>)<br>
+
+A<sub>abs</sub> &nbsp; = &nbsp; A<sub>E</sub>
+&omega;<sub>0</sub><sup>2</sup>
+&Gamma; &omega;
+/ (&omega;<sub>0</sub><sup>2</sup>
++ &omega;<sup>2</sup>)<sup>2</sup><br>
+
+A<sub>el</sub> &nbsp; = &nbsp; A<sub>E</sub>
+&omega;<sub>0</sub><sup>2</sup>
+(&omega;<sub>0</sub><sup>2</sup>
+&minus; &omega;<sup>2</sup>)
+/ (&omega;<sub>0</sub><sup>2</sup>
++ &omega;<sup>2</sup>)<sup>2</sup><br>
+
+A<sub>1</sub> &nbsp; = &nbsp; &minus; (A<sub>abs</sub> &omega;
++ (&Gamma;/2) A<sub>el</sub>)<br>
+
+B<sub>1</sub> &nbsp; = &nbsp; &minus; A<sub>el</sub></p>
+
+<table class="case1"><tr><td>
+<b>Caso 3:
+&Gamma; &gt;
+2 &omega;<sub>0</sub></b>
+</td></tr></table>
+
+<p>y(t) &nbsp; = &nbsp; A<sub>abs</sub> sin (&omega;t)
++ A<sub>el</sub> cos (&omega;t) &nbsp;
++ &nbsp; e<sup>&minus;&Gamma;t/2</sup>
+[A<sub>1</sub> sinh (&omega;<sub>1</sub>t)
++ B<sub>1</sub> cosh (&omega;<sub>1</sub>t)]<br>
+
+&omega;<sub>1</sub> &nbsp; = &nbsp;
+(&Gamma;<sup>2</sup>/4
+&minus; &omega;<sub>0</sub><sup>2</sup>)<sup>1/2</sup><br>
+
+A<sub>abs</sub> &nbsp; = &nbsp; A<sub>E</sub>
+&omega;<sub>0</sub><sup>2</sup>
+&Gamma; &omega;
+/ [(&omega;<sub>0</sub><sup>2</sup>
+&minus; &omega;<sup>2</sup>)<sup>2</sup>
++ &Gamma;<sup>2</sup>
+&omega;<sup>2</sup>]<br>
+
+A<sub>el</sub> &nbsp; = &nbsp; A<sub>E</sub>
+&omega;<sub>0</sub><sup>2</sup>
+(&omega;<sub>0</sub><sup>2</sup>
+&minus; &omega;<sup>2</sup>)
+/ [(&omega;<sub>0</sub><sup>2</sup>
+&minus; &omega;<sup>2</sup>)<sup>2</sup>
++ &Gamma;<sup>2</sup>
+&omega;<sup>2</sup>]<br>
+
+A<sub>1</sub> &nbsp; = &nbsp; &minus; (A<sub>abs</sub> &omega;
++ (&Gamma;/2) A<sub>el</sub>)
+/ &omega;<sub>1</sub><br>
+
+B<sub>1</sub> &nbsp; = &nbsp; &minus; A<sub>el</sub></p>
+
+<div class="Abstand">&nbsp;</div>
+
+<hr class="Trennlinie">
+
+<div class="Abstand">&nbsp;</div>
+
+<p class="Ende">URL: http://www.walter-fendt.de/ph6es/resonance_math_es.htm<br>
+Walter Fendt, 9 Septiembre 1998<br>
+Traducci&oacute;n: Juan Mu&ntilde;oz, 9 Marzo 1999<br>
+&Uacute;ltima modificaci&oacute;n: 17 Marzo 2010</p>
+
+<p><a href="resonance_es.htm"><img src="../ph/zurueck.gif" alt="back" style="margin: 10px; vertical-align: middle;"></a>
+<a href="resonance_es.htm">Vuelta a la P&aacute;gina Principal</a></p>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Fuerza de Lorentz</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 660px; height: 400px; }
+div#canvas { width: 420px; height: 400px; }
+div#panel { left: 420px; width: 240px; height: 400px; } 
+button { width: 220px; }
+input { width: 20px; }
+.pos1 { left: 10px;}
+</style>
+<script src="lorentzforce.js"></script>
+<script src="lorentzforce_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Fuerza de Lorentz">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, campo magn&eacute;tico, corriente, Lorentz">
+</head>
+
+<body>
+
+<h1>Fuerza de Lorentz</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=420 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #ffc040;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ff4040;"></button></div>
+    <div style="top: 120px;"><button id="bu3" style="background-color: #00ffff;"></button></div>
+    <div style="top: 180px;"><input type="checkbox" id="cb1" name="cb1" value="">
+      <label for="cb1" id="lb1" style="color: #ff0000;"></label></div>
+    <div style="top: 220px;"><input type="checkbox" id="cb2" name="cb2" value="">
+      <label for="cb2" id="lb2" style="color: #0000ff;"></label></div>
+    <div style="top: 260px;"><input type="checkbox" id="cb3" name="cb3" value="">
+      <label for="cb3" id="lb3" style="color: #000000;"></label></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("lorentzforce",1,6,1998,13,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

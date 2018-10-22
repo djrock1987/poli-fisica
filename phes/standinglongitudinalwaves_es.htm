@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Ondas Estacionarias Longitudinales</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 680px; height: 420px; }
+div#canvas { width: 450px; height: 420px; }
+div#panel { left: 450px; width: 230px; height: 420px; } 
+button { left: 10px; width: 210px; }
+input[type="text"] { left: 120px; width: 60px; }
+.pos1 { left: 10px; }
+.pos2 { left: 125px; }
+.pos3 { left: 200px; }
+</style>
+<script src="standinglongitudinalwaves.js"></script>
+<script src="standinglongitudinalwaves_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Ondas Estacionarias Longitudinales">
+<meta name="author" content="Walter Fendt, Mario Alberto G&oacute;mez Garc&iacute;a">
+<meta name="keywords" content="App, physics, mechanics, waves, standing waves, harmonics, longitudinal waves">
+</head>
+
+<body>
+
+<h1>Ondas Estacionarias Longitudinales</h1>
+
+<p>Esta aplicaci&oacute;n simula, como ejemplo de <em class="Begriff">ondas estacionarias longitudinales</em>, los arm&oacute;nicos que se 
+dan en un tubo de aire. Se ilustra el movimiento de las mol&eacute;culas de aire para este tipo de oscilaci&oacute;n (obviamente, en la realidad, 
+las mol&eacute;culas se mueven en distancias m&aacute;s cortas y el movimiento es m&aacute;s r&aacute;pido). Los <em class="Begriff">nodos</em>, 
+es decir, los puntos donde las part&iacute;culas est&aacute;n quietas, se marcan con &quot;N&quot; mientras que &quot;A&quot; indica un 
+<em class="Begriff">antinodo</em> (o <em class="Begriff">vientre</em>), es decir, los puntos donde las part&iacute;culas oscilan con amplitud 
+m&aacute;xima. N&oacute;tese que hay siempre un nodo en un extremo cerrado del tubo, mientras que hay un antinodo si est&aacute; abierto.</p>
+
+<p>Se puede seleccionar el estado del tubo mediante los botones de selecci&oacute;n adecuados (&quot;Ambos Extremos Abiertos&quot;, &quot;Un 
+Extremo Abierto&quot; y &quot;Ambos Extremos Cerrados&quot;). Los botones &quot;Bajar&quot; y &quot;Subir&quot; permiten cambiar al 
+arm&oacute;nico inmediatamente inferior o superior, respectivamente, al actual. La aplicaci&oacute;n permite mostrar hasta cinco 
+<em class="Begriff">arm&oacute;nicos</em>.</p>
+
+<p>Cada vez que se escriba un nuevo valor de la longitud del tubo en el campo de texto y se presione la tecla &quot;Enter&quot;, la 
+aplicaci&oacute;n calcula la longitud de onda y la frecuencia. Para la velocidad del sonido se toma <span class="nobr">343,5 m/s,</span> 
+correspondiente a una temperature of <span class="nobr">20&deg;C.</span> Se desprecia el efecto del di&aacute;metro del tubo.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=450 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><span class="pos1" id="form"></span></div>
+    <div style="top: 35px;"><input type="radio" id="rboo" name="bg" value=""><label for="rboo" id="lboo"></label></div>
+    <div style="top: 60px;"><input type="radio" id="rbco" name="bg" value=""><label for="rbco" id="lbco"></label></div>
+    <div style="top: 85px;"><input type="radio" id="rbcc" name="bg" value=""><label for="rbcc" id="lbcc"></label></div>
+    <div style="top: 130px;"><span class="pos1" id="harmonic"></span></div>
+    <div style="top: 160px;"><span id="lbosc" class="pos1" style="color: #ff0000;"></span></div>
+    <div style="top: 200px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 240px;"><button id="bu2" style="background-color: #ffc040;"></button></div>
+    <div style="top: 290px;"><span class="pos1" id="ipLa"></span><input type="text" id="ipLb"><span class="pos3" id="ipLc"></span></div>
+    <div style="top: 320px;"><span class="pos1" id="opWa"></span><span id="opWb" class="pos2"></span><span class="pos3" id="opWc"></span></div>
+    <div style="top: 350px;"><span class="pos1" id="opFa"></span><span id="opFb" class="pos2"></span><span class="pos3" id="opFc"></span></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("standinglongitudinalwaves",8,6,1998,13,12,2017,"Juan Mu&ntilde;oz, 1999, Mario Alberto G&oacute;mez Garc&iacute;a, 2008");
+</script>
+
+</body>
+</html>

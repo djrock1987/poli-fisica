@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>El Efecto Fotoel&eacute;ctrico</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style type="text/css">
+div#total { width: 820px; height: 420px; }
+div#canvas { width: 580px; height: 420px; }
+div#panel { left: 580px; width: 240px; height: 420px; } 
+select { width: 220px; height: 22px; font-family: monospace; }
+input[type="range"] { width: 100px; }
+button { width: 220px; }
+.pos1 { left: 10px; }
+.pos2 { left: 130px; }
+.pos3 { left: 200px; }
+</style>
+<script src="photoeffect.js"></script>
+<script src="photoeffect_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Efecto fotoel&eacute;ctrico">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, &aacute;tomo, quantum physics, efecto fotoel&eacute;ctrico, constante de Planck">
+</head>
+
+<body>
+
+<h1>El Efecto Fotoel&eacute;ctrico</h1>
+
+<p>Una placa de zinc reci&eacute;n pulida, cargada negativamente, pierde su carga si se la expone a la luz ultravioleta. Este fen&oacute;meno 
+se llama <em class="Begriff">efecto fotoel&eacute;ctrico</em>.</p>
+
+<p>Investigaciones cuidadosas, hacia finales del siglo diecinueve, prueban que el efecto fotoel&eacute;ctrico sucede tambi&eacute;n con otros 
+materiales, pero s&oacute;lo si la longitud de onda es suficientemente peque&ntilde;a. El efecto fotoel&eacute;ctrico se observa por debajo 
+de alg&uacute;n umbral de longitud de onda que es espec&iacute;fica del material. El hecho de que la luz de longitud de onda elevada no tuviera 
+ning&uacute;n efecto, incluso si es extremadamente intensa, aparec&iacute;a como algo especialmente misterioso para los cient&iacute;ficos.</p>
+
+<p>Finalmente Albert Einstein di&oacute; la explicaci&oacute;n en 1905: La luz est&aacute; constituida por part&iacute;culas 
+(<em class="Begriff">photones</em>), y la <em class="Begriff">energ&iacute;a</em> de tales part&iacute;culas es proporcional a la 
+<em class="Begriff">frecuencia</em> de la luz. Existe una cierta cantidad m&iacute;nima de energ&iacute;a (dependiendo del material) que es 
+necesaria para extraer un electr&oacute;n de la superficie de una placa de zinc u otro cuerpo s&oacute;lido (<em class="Begriff">funci&oacute;n 
+trabajo</em>). Si la energ&iacute;a del fot&oacute;n es mayor que este valor el electr&oacute;n puede ser emitido. De esta explicaci&oacute;n 
+obtenemos la siguiente expresi&oacute;n:</p>
+
+<p style="margin: 30px; text-align: center;"><span class="Formel">E<sub>cin</sub> &nbsp; = &nbsp; h f &nbsp; &minus; &nbsp; W</span></p>
+
+<p class="Formel">
+E<sub>cin</sub> ... energ&iacute;a cin&eacute;tica m&aacute;xima de un electr&oacute;n emitido<br>
+h ..... constante de Planck <span class="nobr">(6,626 &times; 10<sup>&minus;34</sup> Js)</span><br>
+f ..... frecuencia<br>
+W ..... funci&oacute;n trabajo
+</p>
+
+<p>Este app simula un experimento para la determinaci&oacute;n de la <em class="Begriff">constante de Planck</em> y la funci&oacute;n 
+trabajo: Una l&iacute;nea espectral se filtra proveniente de la luz de una l&aacute;mpara de mercurio. Esta luz llega al c&aacute;dodo (C) 
+de una c&eacute;lula fotoel&eacute;ctrica y provoca la emisi&oacute;n de electrones (o no). Para encontrar la energ&iacute;a cin&eacute;tica 
+m&aacute;xima de los electrones emitidos es necesario aumentar un voltaje de retardo por medio de un potenci&oacute;metro hasta que 
+ning&uacute;n electr&oacute;n llegue al &aacute;nodo (A). El medidor azul indica la magnitud de este potencial de retardo. Se puede ver por 
+el medidor rojo si los electrones alcanzan el &aacute;nodo.</p>
+
+<p>El panel en el lado derecho permite variar el material del c&aacute;todo, la longitud de onda y el voltaje retardado. Los valores se refieren 
+a la frecuencia de la luz y al balance energ&eacute;tico del efecto fotoel&eacute;ctrico. El resultado de las medidas se dibuja en un diagrama 
+frecuencia voltaje en la parte inferior izquierda pero puede borrarse con el bot&oacute;n del panel.</p>
+
+<p>La evaluaci&oacute;n de las dos series de medidas por medio del diagrama da lugar a dos l&iacute;neas paralelas. La constante de Planck (h) 
+puede calcularse de las pendientes de estas l&iacute;neas. Adem&aacute;s se puede leer la funci&oacute;n trabajo del material cat&oacute;dico 
+(en eV, electr&oacute;n Voltio) directamente de la intersecci&oacute;n con el eje vertical.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=580 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 30px;"><select id="ch1"></select></div>
+    <div style="top: 60px;"><span id="lb2" class="pos1"></span></div>
+    <div style="top: 80px;"><select id="ch2"></select></div>
+    <div style="top: 110px;"><span id="lb3" class="pos1"></span><span id="ip1" class="pos2"></span><span id="ip2" class="pos3"></span> </div>
+    <div style="top: 130px;"><input type="range" id="sl1" min=0 max=29 step=1 value=0>
+      <input type="range" id="sl2" min=0 max=10 step=1 value=0 style="left: 130px;"></div>
+    <div style="top: 160px;"><span id="op1a" class="pos1"></span>
+      <span id="op1b" class="pos2"></span><span id="op1c" class="pos3"></span></div>
+    <div style="top: 190px;"><span id="op2a" class="pos1"></span></div>
+    <div style="top: 215px;"><span id="op2b" class="pos1"></span><span id="op2c" class="pos2"></span><span id="op2d" class="pos3"></span></div>
+    <div style="top: 245px;"><span id="op3a" class="pos1"></span><span id="op3b" class="pos2"></span><span id="op3c" class="pos3"></span></div>
+    <div style="top: 275px;"><span id="op4a" class="pos1"></span></div>
+    <div style="top: 300px;"><span id="op4b" class="pos1"></span><span id="op4c" class="pos2"></span><span id="op4d" class="pos3"></span></div>
+    <div style="top: 335px;"><button id="bu" style="background-color: #00ffff;"></button></div>
+    <div style="top: 390px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("photoeffect",20,2,2000,14,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

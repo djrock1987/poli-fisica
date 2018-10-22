@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Movimiento de Proyectiles</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 720px; height: 420px; }
+div#canvas { width: 440px; height: 420px; }
+div#panel { left: 440px; width: 280px; height: 420px; } 
+.pos1 { left: 10px; }
+.pos3 { left: 240px; }
+input[type="text"] { left: 165px; width: 60px; }
+button { width: 260px; }
+</style>
+<script src="projectile.js"></script>
+<script src="projectile_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Movimiento de proyectiles">
+<meta name="author" content="Walter Fendt, Mario Alberto G&oacute;mez Garc&iacute;a">
+<meta name="keywords" content="f&iacute;sica, mec&aacute;nica, movimiento de proyectiles">
+</head>
+
+<body>
+
+<h1>Movimiento de Proyectiles</h1>
+
+<p>Esta aplicaci&oacute;n muestra el <em class="Begriff">movimiento de un proyectil</em>.</p>
+
+<p>El bot&oacute;n &quot;Restablecer&quot; lleva al proyectil a su posici&oacute;n inicial. Puedes iniciar, detener y reanudar la 
+simulaci&oacute;n con el otro bot&oacute;n. Si seleccionas la opci&oacute;n &quot;Animaci&oacute;n lenta&quot;, el movimiento sera diez veces 
+m&aacute;s lento. Puedes variar, dentro de ciertos l&iacute;mites, los valores de la altura inicial, la velocidad inicial, el &aacute;ngulo de 
+inclinaci&oacute;n, la masa y la aceleraci&oacute;n gravitacional. Los botones que se encuentran en la parte inferior derecha te dan la 
+posibilidad de seleccionar una de las dimensiones f&iacute;sicas.</p>
+
+<p>No se considera el efecto de la resistencia del aire.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=440 height=420>This browser doesn't support HTML 5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 125px;"><span class="pos1" id="ipHa"></span><input type="text" id="ipHb"><span class="pos3" id="ipHc"></span></div>
+    <div style="top: 155px;"><span class="pos1" id="ipVa"></span><input type="text" id="ipVb"><span class="pos3" id="ipVc"></span></div>
+    <div style="top: 185px;"><span class="pos1" id="ipWa"></span><input type="text" id="ipWb"><span class="pos3" id="ipWc"></span></div>
+    <div style="top: 215px;"><span class="pos1" id="ipMa"></span><input type="text" id="ipMb"><span class="pos3" id="ipMc"></span></div>
+    <div style="top: 245px;"><span class="pos1" id="ipGa"></span><input type="text" id="ipGb"><span class="pos3" id="ipGc"></span></div>
+    <div style="top: 270px; color: #ff0000;"><input type="radio" id="rbY" name="bg" value=""><label for="rbY" id="lbY"></label></div>
+    <div style="top: 295px; color: #ff00ff;"><input type="radio" id="rbV" name="bg" value=""><label for="rbV" id="lbV"></label></div>
+    <div style="top: 320px; color: #0000ff;"><input type="radio" id="rbA" name="bg" value=""><label for="rbA" id="lbA"></label></div>
+    <div style="top: 345px; color: #008020;"><input type="radio" id="rbF" name="bg" value=""><label for="rbF" id="lbF"></label></div>
+    <div style="top: 370px; color: #000000;"><input type="radio" id="rbE" name="bg" value=""><label for="rbE" id="lbE"></label></div>
+    <div style="top: 400px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("projectile",13,9,2000,12,12,2017,"Mario Alberto G&oacute;mez Garc&iacute;a, 2001");</script>
+
+</body>
+</html>
